@@ -225,10 +225,33 @@ class Handler(SimpleHTTPRequestHandler):
         })
 
 
+def _lan_ips() -> list[str]:
+    """IPv4 de la red local, para imprimir la URL que abrir desde el móvil."""
+    out: list[str] = []
+    try:
+        import socket
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        try:
+            s.connect(("192.168.0.1", 1))       # no envía nada: sólo elige interfaz
+            out.append(s.getsockname()[0])
+        finally:
+            s.close()
+    except OSError:
+        pass
+    return [ip for ip in out if not ip.startswith("127.")]
+
+
 def main() -> None:
+    host = os.environ.get("HOST", "127.0.0.1")
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 8088
-    server = ThreadingHTTPServer(("127.0.0.1", port), Handler)
+    server = ThreadingHTTPServer((host, port), Handler)
     print(f"\n  Lyric Rapper → http://localhost:{port}")
+    if host in ("0.0.0.0", "::", ""):
+        for ip in _lan_ips():
+            print(f"  desde el móvil (misma Wi-Fi) → http://{ip}:{port}")
+        print("  aviso: cualquiera en tu red puede entrar mientras esté abierto")
+    else:
+        print("  sólo local; para abrirlo al móvil:  HOST=0.0.0.0 ./serve.sh")
     print(f"  raíz: {ROOT}")
     print("  Ctrl+C para detener\n")
     try:
