@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lyric Rapper — letras sincronizadas</title>
+<meta name="description" content="Lee la letra y haz clic en cualquier línea para que la música empiece exactamente ahí." />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%A4%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Lyric Rapper, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 14v-4M8 18V6M12 15V9M16 20V4M20 13v-2" />
+        </svg>
+      </span>
+      <span class="brand-text">Lyric<b>Rapper</b></span>
+    </a>
+
+    <div class="track-switch">
+      <label class="sr-only" for="track-select">Elegir canción</label>
+      <select id="track-select" class="track-select"></select>
+    </div>
+
+    <nav class="topbar-actions">
+      <button id="btn-times" class="btn btn-ghost" type="button" aria-pressed="false" title="Mostrar inicio y fin de cada línea">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span>Tiempos</span>
+      </button>
+      <a class="btn btn-ghost" href="sync.html" title="Estudio para generar los tiempos de una canción">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 20v-8M8 20v-4M16 20v-6M4 20v-2M20 20V8"/></svg>
+        <span>Sincronizar</span>
+      </a>
+      <button id="btn-help" class="btn btn-icon" type="button" title="Atajos y ayuda" aria-label="Ayuda">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.4 2.3c-.6.2-.9.8-.9 1.4v.6"/><path d="M12 17h.01"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <div id="banner" class="banner" hidden>
+    <div class="banner-body">
+      <strong id="banner-title">Falta el audio</strong>
+      <p id="banner-text"></p>
+    </div>
+    <button class="btn btn-ghost banner-close" type="button" aria-label="Cerrar aviso">✕</button>
+  </div>
+
+  <main class="layout">
+
+    <aside class="now" aria-label="Reproducción actual">
+      <div class="cover" id="cover" aria-hidden="true">
+        <div class="cover-art" id="cover-art"></div>
+        <div class="cover-shade"></div>
+        <div class="cover-meta">
+          <p class="cover-kicker" id="cover-kicker">Piloto</p>
+          <h1 class="cover-title" id="track-title">Cargando…</h1>
+          <p class="cover-artist" id="track-artist"></p>
+        </div>
+      </div>
+
+      <div class="now-stats">
+        <div class="stat">
+          <span class="stat-label">Línea</span>
+          <span class="stat-value" id="stat-line">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Tiempo</span>
+          <span class="stat-value" id="stat-time">0:00</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Compás</span>
+          <span class="stat-value" id="stat-bpm">—</span>
+        </div>
+      </div>
+
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Buscar en la letra…  (/)" autocomplete="off" spellcheck="false" aria-label="Buscar en la letra" />
+        <button id="search-clear" class="search-clear" type="button" aria-label="Limpiar búsqueda" hidden>✕</button>
+      </div>
+
+      <div class="now-actions">
+        <button id="btn-loop" class="btn btn-chip" type="button" aria-pressed="false" title="Repetir la línea actual (L)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          <span>Repetir línea</span>
+        </button>
+        <button id="btn-share" class="btn btn-chip" type="button" title="Copiar enlace a este punto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>
+          <span>Compartir</span>
+        </button>
+      </div>
+    </aside>
+
+    <section class="lyrics-panel" aria-label="Letra">
+      <div class="lyrics-head">
+        <h2>Letra</h2>
+        <p class="hint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+          Haz clic en una línea para empezar ahí
+        </p>
+      </div>
+
+      <div id="lyrics" class="lyrics" tabindex="-1">
+        <div class="lyrics-loading">Cargando letra…</div>
+      </div>
+
+      <p class="lyrics-foot" id="lyrics-foot"></p>
+    </section>
+
+  </main>
+
+  <footer class="transport" role="group" aria-label="Controles de reproducción">
+    <div class="progress-wrap">
+      <div id="progress" class="progress" role="slider" tabindex="0"
+           aria-label="Progreso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-buffer" id="progress-buffer"></div>
+        <div class="progress-fill" id="progress-fill"></div>
+        <div class="progress-ticks" id="progress-ticks"></div>
+        <div class="progress-knob" id="progress-knob"></div>
+      </div>
+      <div class="progress-times">
+        <span id="time-current">0:00</span>
+        <span id="time-total">0:00</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="btn-prev" class="btn btn-icon" type="button" title="Línea anterior (↑)" aria-label="Línea anterior">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg>
+      </button>
+      <button id="btn-play" class="btn btn-play" type="button" title="Reproducir (espacio)" aria-label="Reproducir">
+        <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+      </button>
+      <button id="btn-next" class="btn btn-icon" type="button" title="Línea siguiente (↓)" aria-label="Línea siguiente">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg>
+      </button>
+
+      <div class="controls-right">
+        <button id="btn-speed" class="btn btn-ghost btn-small" type="button" title="Velocidad de reproducción">1×</button>
+        <div class="volume">
+          <button id="btn-mute" class="btn btn-icon btn-small" type="button" title="Silenciar (M)" aria-label="Silenciar">
+            <svg class="i-vol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+            <svg class="i-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9 5 6M21 9l-5 6"/></svg>
+          </button>
+          <input id="volume" class="volume-range" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volumen" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<dialog id="help" class="dialog">
+  <form method="dialog">
+    <h2>Atajos</h2>
+    <ul class="keys">
+      <li><kbd>Espacio</kbd><span>Reproducir / pausar</span></li>
+      <li><kbd>↑</kbd> <kbd>↓</kbd><span>Línea anterior / siguiente</span></li>
+      <li><kbd>←</kbd> <kbd>→</kbd><span>Retroceder / avanzar 5 s</span></li>
+      <li><kbd>L</kbd><span>Repetir la línea actual</span></li>
+      <li><kbd>M</kbd><span>Silenciar</span></li>
+      <li><kbd>/</kbd><span>Buscar en la letra</span></li>
+      <li><kbd>Esc</kbd><span>Cerrar ventanas</span></li>
+    </ul>
+    <h2>Cómo se hicieron los tiempos</h2>
+    <p class="dialog-text">
+      Cada línea guarda <code>start</code> y <code>end</code> en segundos. Se pueden obtener
+      a mano con el <a href="sync.html">estudio de sincronización</a> (marcas una tecla al
+      empezar cada línea) o automáticamente con <code>tools/align.py</code>.
+      El reproductor busca <code>start − 0,12 s</code> para no cortar la primera sílaba.
+    </p>
+    <button class="btn btn-primary" value="close">Entendido</button>
+  </form>
+</dialog>
+
+<audio id="audio" preload="metadata" crossorigin="anonymous"></audio>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

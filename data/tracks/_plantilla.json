@@ -1,0 +1,16 @@
+{
+  "_como_usar": "Copia este archivo como data/tracks/<id>.json, rellena los campos y agrega una entrada en data/tracks.json. Los campos que empiezan con guion bajo se ignoran.",
+  "id": "mi-tema",
+  "title": "Mi tema",
+  "artist": "Quien sea",
+  "album": "",
+  "kicker": "Piloto",
+  "audio": "assets/audio/mi-tema.mp3",
+  "duration": 0,
+  "bpm": null,
+  "language": "es",
+  "lines": [
+    { "start": 0.0, "end": 3.2, "text": "Primera línea de la letra" },
+    { "start": 3.2, "end": 6.4, "text": "Segunda línea de la letra" }
+  ]
+}

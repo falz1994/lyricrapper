@@ -1,0 +1,759 @@
+{
+  "id": "hail-mary",
+  "title": "Hail Mary",
+  "artist": "Makaveli",
+  "album": "The Don Killuminati: The 7 Day Theory",
+  "kicker": "Alineado con Google Speech-to-Text",
+  "audio": "assets/audio/hailmar.webm",
+  "duration": 309.986,
+  "bpm": null,
+  "language": "en",
+  "lines": [
+    {
+      "start": 0.0,
+      "end": 2.1,
+      "text": "Makaveli in this, Killuminati"
+    },
+    {
+      "start": 2.1,
+      "end": 3.6,
+      "text": "All through your body (all through your body)"
+    },
+    {
+      "start": 3.6,
+      "end": 6.4,
+      "text": "The blow is like a 12 guage shotty, uh"
+    },
+    {
+      "start": 6.4,
+      "end": 10.1,
+      "text": "Feel me"
+    },
+    {
+      "start": 10.1,
+      "end": 13.6,
+      "text": "God said he should send his one begotten son"
+    },
+    {
+      "start": 13.6,
+      "end": 17.2,
+      "text": "To lead the wild in to the ways of the man"
+    },
+    {
+      "start": 17.2,
+      "end": 18.0,
+      "text": "Follow me"
+    },
+    {
+      "start": 18.0,
+      "end": 19.4,
+      "text": "Be my flesh, flesh of my flesh"
+    },
+    {
+      "start": 19.4,
+      "end": 20.3,
+      "text": "Come with me"
+    },
+    {
+      "start": 20.3,
+      "end": 22.0,
+      "text": "Hail Mary"
+    },
+    {
+      "start": 22.0,
+      "end": 23.6,
+      "text": "Nigga, run quick, see"
+    },
+    {
+      "start": 23.6,
+      "end": 25.88,
+      "text": "What do we have here now?"
+    },
+    {
+      "start": 25.88,
+      "end": 27.92,
+      "text": "Do you wanna ride or die?"
+    },
+    {
+      "start": 27.92,
+      "end": 30.64,
+      "text": "La, la la la, la, la, la la"
+    },
+    {
+      "start": 30.64,
+      "end": 32.9,
+      "text": "I ain't a killa but don't push me"
+    },
+    {
+      "start": 32.9,
+      "end": 35.8,
+      "text": "Revenge is like the sweetest joy next to gettin pussy"
+    },
+    {
+      "start": 35.8,
+      "end": 39.5,
+      "text": "Picture paragraphs unloaded, wise words being quoted"
+    },
+    {
+      "start": 39.5,
+      "end": 42.2,
+      "text": "Peep the weakness in the rap game and sewed it"
+    },
+    {
+      "start": 42.2,
+      "end": 44.7,
+      "text": "Bow down, pray to God, hoping that he's listenin'"
+    },
+    {
+      "start": 44.7,
+      "end": 47.733,
+      "text": "Seein' niggas comin' for me, through my diamonds when they glistenin'"
+    },
+    {
+      "start": 47.733,
+      "end": 48.6,
+      "text": "Now pay attention"
+    },
+    {
+      "start": 48.6,
+      "end": 49.8,
+      "text": "Bless me, please, father"
+    },
+    {
+      "start": 49.8,
+      "end": 51.6,
+      "text": "I'm a ghost in these killin' fields"
+    },
+    {
+      "start": 51.6,
+      "end": 53.2,
+      "text": "Hail Mary, catch me if I go"
+    },
+    {
+      "start": 53.2,
+      "end": 56.3,
+      "text": "Let's go deep inside the solitary mind of a mad man"
+    },
+    {
+      "start": 56.3,
+      "end": 59.9,
+      "text": "Screams in the dark, evil lurks, enemies see me flee"
+    },
+    {
+      "start": 59.9,
+      "end": 63.0,
+      "text": "Activate my hate, let it break, to the flame"
+    },
+    {
+      "start": 63.0,
+      "end": 64.9,
+      "text": "Set trip, empty out my clip"
+    },
+    {
+      "start": 64.9,
+      "end": 66.1,
+      "text": "Never stop to aim"
+    },
+    {
+      "start": 66.1,
+      "end": 68.35,
+      "text": "Some say the game is all corupted"
+    },
+    {
+      "start": 68.35,
+      "end": 71.6,
+      "text": "Fuck this shit, stuck niggas is lucky if we bust out this shit"
+    },
+    {
+      "start": 71.6,
+      "end": 74.5,
+      "text": "Plus momma told me never stop until I bust a nut"
+    },
+    {
+      "start": 74.5,
+      "end": 76.4,
+      "text": "Fuck the world if they can't adjust"
+    },
+    {
+      "start": 76.4,
+      "end": 77.2,
+      "text": "It's just as well"
+    },
+    {
+      "start": 77.2,
+      "end": 78.1,
+      "text": "Hail Mary"
+    },
+    {
+      "start": 78.1,
+      "end": 79.7,
+      "text": "Come with me"
+    },
+    {
+      "start": 79.7,
+      "end": 80.7,
+      "text": "Hail Mary"
+    },
+    {
+      "start": 80.7,
+      "end": 81.8,
+      "text": "Nigga run quick, see"
+    },
+    {
+      "start": 81.8,
+      "end": 84.4,
+      "text": "What do we have here now?"
+    },
+    {
+      "start": 84.4,
+      "end": 86.2,
+      "text": "Do you wanna ride or die?"
+    },
+    {
+      "start": 86.2,
+      "end": 89.9,
+      "text": "La, la la la, la, la, la la"
+    },
+    {
+      "start": 89.9,
+      "end": 90.4,
+      "text": "Come with me"
+    },
+    {
+      "start": 90.4,
+      "end": 92.3,
+      "text": "Hail Mary"
+    },
+    {
+      "start": 92.3,
+      "end": 93.5,
+      "text": "Nigga, run quick, see"
+    },
+    {
+      "start": 93.5,
+      "end": 94.7,
+      "text": "What do we have here now?"
+    },
+    {
+      "start": 94.7,
+      "end": 95.9,
+      "text": "Do you wanna ride or die?"
+    },
+    {
+      "start": 95.9,
+      "end": 97.6,
+      "text": "La, la la la, la, la, la la"
+    },
+    {
+      "start": 97.6,
+      "end": 103.2,
+      "text": "Penitentiaries is packed with promise makers"
+    },
+    {
+      "start": 103.2,
+      "end": 106.0,
+      "text": "Never realize the precious time that bitch niggas is wastin'"
+    },
+    {
+      "start": 106.0,
+      "end": 109.0,
+      "text": "Institutionalized, I live my life a product made to crumble"
+    },
+    {
+      "start": 109.0,
+      "end": 111.933,
+      "text": "But too hardened for a smile, we're too crazy to be humble"
+    },
+    {
+      "start": 111.933,
+      "end": 112.2,
+      "text": "We ballin'"
+    },
+    {
+      "start": 112.2,
+      "end": 114.9,
+      "text": "Catch me, father, please, cause I'm fallin"
+    },
+    {
+      "start": 114.9,
+      "end": 118.933,
+      "text": "In the liquor store, pass the Hennessy, I hear ya callin', can I get some more?"
+    },
+    {
+      "start": 118.933,
+      "end": 121.433,
+      "text": "Hell, 'til I reach Hell, I ain't scared"
+    },
+    {
+      "start": 121.433,
+      "end": 124.0,
+      "text": "Momma checkin in my bedroom but I ain't there"
+    },
+    {
+      "start": 124.0,
+      "end": 127.0,
+      "text": "I got a head with no screws in it, what can I do?"
+    },
+    {
+      "start": 127.0,
+      "end": 129.4,
+      "text": "One life to live but I got nothin' to lose"
+    },
+    {
+      "start": 129.4,
+      "end": 133.0,
+      "text": "Just me and you on a one way trip to prison, sellin' drugs"
+    },
+    {
+      "start": 133.0,
+      "end": 135.9,
+      "text": "We all wrapped up in this livin' life as thugs"
+    },
+    {
+      "start": 135.9,
+      "end": 138.8,
+      "text": "To my homeboys in Clinton Max, doin' they bid"
+    },
+    {
+      "start": 138.8,
+      "end": 141.7,
+      "text": "Raise hell to this real shit and feel this"
+    },
+    {
+      "start": 141.7,
+      "end": 143.44,
+      "text": "When they turn out the lights"
+    },
+    {
+      "start": 143.44,
+      "end": 144.5,
+      "text": "I'll be down in the dark"
+    },
+    {
+      "start": 144.5,
+      "end": 146.1,
+      "text": "Thuggin' eternal through my heart"
+    },
+    {
+      "start": 146.1,
+      "end": 148.1,
+      "text": "Now Hail Mary, nigga"
+    },
+    {
+      "start": 148.1,
+      "end": 149.9,
+      "text": "Come with me"
+    },
+    {
+      "start": 149.9,
+      "end": 150.7,
+      "text": "Hail Mary"
+    },
+    {
+      "start": 150.7,
+      "end": 152.0,
+      "text": "Nigga, run quick, see"
+    },
+    {
+      "start": 152.0,
+      "end": 154.5,
+      "text": "What do we have here now?"
+    },
+    {
+      "start": 154.5,
+      "end": 156.8,
+      "text": "Do you wanna ride or die?"
+    },
+    {
+      "start": 156.8,
+      "end": 160.0,
+      "text": "La, la la la, la, la, la la"
+    },
+    {
+      "start": 160.0,
+      "end": 161.267,
+      "text": "Come with me"
+    },
+    {
+      "start": 161.267,
+      "end": 162.6,
+      "text": "Hail Mary"
+    },
+    {
+      "start": 162.6,
+      "end": 163.6,
+      "text": "Nigga, run quick, see"
+    },
+    {
+      "start": 163.6,
+      "end": 165.2,
+      "text": "What do we have here now?"
+    },
+    {
+      "start": 165.2,
+      "end": 166.6,
+      "text": "Do you wanna ride or die?"
+    },
+    {
+      "start": 166.6,
+      "end": 168.4,
+      "text": "La, la la la, la, la, la la"
+    },
+    {
+      "start": 168.4,
+      "end": 171.0,
+      "text": "They got an APB out, on my thug family"
+    },
+    {
+      "start": 171.0,
+      "end": 173.4,
+      "text": "Since the Outlawz run these streets"
+    },
+    {
+      "start": 173.4,
+      "end": 176.0,
+      "text": "Like these scandalous freaks"
+    },
+    {
+      "start": 176.0,
+      "end": 179.6,
+      "text": "Our enemies die now, walk around half dead"
+    },
+    {
+      "start": 179.6,
+      "end": 184.0,
+      "text": "Head down, K blasted off, Hennessy and Thai Chronic mixed in"
+    },
+    {
+      "start": 184.0,
+      "end": 186.1,
+      "text": "Now I'm twisted, blisted and high"
+    },
+    {
+      "start": 186.1,
+      "end": 188.7,
+      "text": "Visions of me thug livin' gettin' me by"
+    },
+    {
+      "start": 188.7,
+      "end": 191.4,
+      "text": "Forever live and I multiply, survive by thugs"
+    },
+    {
+      "start": 191.4,
+      "end": 192.9,
+      "text": "When I die they won't cry"
+    },
+    {
+      "start": 192.9,
+      "end": 194.4,
+      "text": "Unless they comin'with slugs"
+    },
+    {
+      "start": 194.4,
+      "end": 197.7,
+      "text": "Peep the whole seen, and whatever goin' on around me"
+    },
+    {
+      "start": 197.7,
+      "end": 199.067,
+      "text": "Brain kinda cloudy"
+    },
+    {
+      "start": 199.067,
+      "end": 200.4,
+      "text": "Smoked and out feelin rowdy"
+    },
+    {
+      "start": 200.4,
+      "end": 202.0,
+      "text": "Ready wet the party up and"
+    },
+    {
+      "start": 202.0,
+      "end": 203.6,
+      "text": "Whoever in that motherfucka"
+    },
+    {
+      "start": 203.6,
+      "end": 204.9,
+      "text": "Nasty new street slugger"
+    },
+    {
+      "start": 204.9,
+      "end": 207.15,
+      "text": "My heat seeks suckas on a regula"
+    },
+    {
+      "start": 207.15,
+      "end": 209.3,
+      "text": "Mashin' in a stolen Black Ac Integera"
+    },
+    {
+      "start": 209.3,
+      "end": 210.7,
+      "text": "Cock back sixty seconds"
+    },
+    {
+      "start": 210.7,
+      "end": 212.4,
+      "text": "Till the draw that's when I deadin' ya"
+    },
+    {
+      "start": 212.4,
+      "end": 215.1,
+      "text": "Feet first ya gotta a nice gat but my heat's worse"
+    },
+    {
+      "start": 215.1,
+      "end": 216.3,
+      "text": "From a thug to preachin' church"
+    },
+    {
+      "start": 216.3,
+      "end": 218.433,
+      "text": "I gave you love now you eatin' dirt"
+    },
+    {
+      "start": 218.433,
+      "end": 220.9,
+      "text": "Needin' work and I ain't the nigga to put you up on"
+    },
+    {
+      "start": 220.9,
+      "end": 221.5,
+      "text": "Cause word is bond"
+    },
+    {
+      "start": 221.5,
+      "end": 223.68,
+      "text": "When I was broke I had to hustle 'til dawn"
+    },
+    {
+      "start": 223.68,
+      "end": 225.05,
+      "text": "That's when sun came up"
+    },
+    {
+      "start": 225.05,
+      "end": 227.5,
+      "text": "There's only one way up, hold ya head stay up"
+    },
+    {
+      "start": 227.5,
+      "end": 229.9,
+      "text": "To all my nigga's, get ya pay and wait up"
+    },
+    {
+      "start": 229.9,
+      "end": 231.3,
+      "text": "If it's on then it's on"
+    },
+    {
+      "start": 231.3,
+      "end": 232.7,
+      "text": "We rate beat breaks"
+    },
+    {
+      "start": 232.7,
+      "end": 234.3,
+      "text": "Outlawz on a paper chase"
+    },
+    {
+      "start": 234.3,
+      "end": 235.4,
+      "text": "Can you relate"
+    },
+    {
+      "start": 235.4,
+      "end": 236.4,
+      "text": "To this shit I don't got"
+    },
+    {
+      "start": 236.4,
+      "end": 238.3,
+      "text": "Be the shit I gotta take"
+    },
+    {
+      "start": 238.3,
+      "end": 239.4,
+      "text": "Dealin' with fate"
+    },
+    {
+      "start": 239.4,
+      "end": 240.6,
+      "text": "Hoping God don't close the gate"
+    },
+    {
+      "start": 240.6,
+      "end": 243.8,
+      "text": "If it's on then it's on"
+    },
+    {
+      "start": 243.8,
+      "end": 244.5,
+      "text": "We rate beat breaks"
+    },
+    {
+      "start": 244.5,
+      "end": 246.0,
+      "text": "Outlaws on a paper chase"
+    },
+    {
+      "start": 246.0,
+      "end": 247.0,
+      "text": "Can you relate"
+    },
+    {
+      "start": 247.0,
+      "end": 248.4,
+      "text": "To this shit I don't got"
+    },
+    {
+      "start": 248.4,
+      "end": 250.0,
+      "text": "Be the shit I gotta take"
+    },
+    {
+      "start": 250.0,
+      "end": 251.1,
+      "text": "Dealin' with fate"
+    },
+    {
+      "start": 251.1,
+      "end": 253.4,
+      "text": "Hoping God don't close the gate"
+    },
+    {
+      "start": 253.4,
+      "end": 254.3,
+      "text": "Come with me"
+    },
+    {
+      "start": 254.3,
+      "end": 255.4,
+      "text": "Hail Mary"
+    },
+    {
+      "start": 255.4,
+      "end": 256.6,
+      "text": "Nigga, run quick, see"
+    },
+    {
+      "start": 256.6,
+      "end": 258.2,
+      "text": "What do we have here now?"
+    },
+    {
+      "start": 258.2,
+      "end": 259.3,
+      "text": "Do you wanna ride or die?"
+    },
+    {
+      "start": 259.3,
+      "end": 259.8,
+      "text": "La, la la la, la, la, la la"
+    },
+    {
+      "start": 259.8,
+      "end": 261.6,
+      "text": "We've been traveling on this wavy road"
+    },
+    {
+      "start": 261.6,
+      "end": 265.5,
+      "text": "Long time life can be a heavy load"
+    },
+    {
+      "start": 265.5,
+      "end": 266.9,
+      "text": "But we ride, ride it like a bullet"
+    },
+    {
+      "start": 266.9,
+      "end": 272.0,
+      "text": "Hail Mary, Hail Mary"
+    },
+    {
+      "start": 272.0,
+      "end": 273.4,
+      "text": "We won't worry, everything will curry"
+    },
+    {
+      "start": 273.4,
+      "end": 276.7,
+      "text": "We free like the bird in the tree"
+    },
+    {
+      "start": 276.7,
+      "end": 279.1,
+      "text": "We won't worry, everything will curry"
+    },
+    {
+      "start": 279.1,
+      "end": 281.4,
+      "text": "Yes we free like the bird in the tree"
+    },
+    {
+      "start": 281.4,
+      "end": 283.0,
+      "text": "We runnin from the penitentiary"
+    },
+    {
+      "start": 283.0,
+      "end": 287.0,
+      "text": "This is the time for reliberty"
+    },
+    {
+      "start": 287.0,
+      "end": 288.1,
+      "text": "Hail Mary, Hail Mary"
+    },
+    {
+      "start": 288.1,
+      "end": 288.8,
+      "text": "Come with me"
+    },
+    {
+      "start": 288.8,
+      "end": 289.5,
+      "text": "Hail Mary"
+    },
+    {
+      "start": 289.5,
+      "end": 290.2,
+      "text": "Nigga, run quick, see"
+    },
+    {
+      "start": 290.2,
+      "end": 294.8,
+      "text": "What do we have here now?"
+    },
+    {
+      "start": 294.8,
+      "end": 296.5,
+      "text": "Do you wanna ride or die?"
+    },
+    {
+      "start": 296.5,
+      "end": 300.7,
+      "text": "La, la la la, la, la, la la"
+    },
+    {
+      "start": 300.7,
+      "end": 302.6,
+      "text": "Westside, Outlawz"
+    },
+    {
+      "start": 302.6,
+      "end": 305.8,
+      "text": "Makaveli the Don, solo"
+    },
+    {
+      "start": 305.8,
+      "end": 309.986,
+      "text": "Killuminati, The 7 Days"
+    }
+  ],
+  "audioFallback": "assets/audio/hailmar.mp3"
+}

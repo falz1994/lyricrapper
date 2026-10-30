@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sincronizar — Lyric Rapper</title>
+<meta name="description" content="Marca a mano el inicio de cada línea y exporta el JSON de tiempos." />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/sync.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%A4%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="studio-body">
+
+<div class="app">
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Volver al reproductor">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 14v-4M8 18V6M12 15V9M16 20V4M20 13v-2" />
+        </svg>
+      </span>
+      <span class="brand-text">Lyric<b>Rapper</b></span>
+    </a>
+    <div class="studio-title">
+      <strong>Estudio de sincronización</strong>
+      <span id="studio-status" class="studio-status">sin audio</span>
+    </div>
+    <nav class="topbar-actions">
+      <a class="btn btn-ghost" href="./" title="Volver al reproductor">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        <span>Reproductor</span>
+      </a>
+    </nav>
+  </header>
+
+  <div id="banner" class="banner" hidden>
+    <div class="banner-body">
+      <strong id="banner-title"></strong>
+      <p id="banner-text"></p>
+    </div>
+    <button class="btn btn-ghost banner-close" type="button" aria-label="Cerrar aviso">✕</button>
+  </div>
+
+  <main class="studio">
+
+    <section class="panel" aria-labelledby="paso-1">
+      <header class="panel-head">
+        <span class="step">1</span>
+        <div>
+          <h2 id="paso-1">Carga el audio</h2>
+          <p>El archivo no sale de tu equipo: se reproduce aquí mismo.</p>
+        </div>
+      </header>
+
+      <div class="drop" id="drop">
+        <input id="file-audio" type="file" accept="audio/*,.mp3,.m4a,.ogg,.opus,.wav,.flac" hidden />
+        <button id="pick-audio" class="btn btn-primary" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          Elegir archivo
+        </button>
+        <p class="drop-hint">o arrástralo aquí · <code>mp3</code>, <code>m4a</code>, <code>wav</code>, <code>ogg</code></p>
+        <p class="drop-file" id="audio-name" hidden></p>
+      </div>
+
+      <div class="fields">
+        <label class="field">
+          <span>Título</span>
+          <input id="f-title" type="text" placeholder="N.Y. State of Mind" autocomplete="off" />
+        </label>
+        <label class="field">
+          <span>Artista</span>
+          <input id="f-artist" type="text" placeholder="Nas" autocomplete="off" />
+        </label>
+        <label class="field">
+          <span>Identificador (id)</span>
+          <input id="f-id" type="text" placeholder="ny-state-of-mind" autocomplete="off" spellcheck="false" />
+        </label>
+      </div>
+
+      <label class="check" id="upload-row" hidden>
+        <input id="f-upload" type="checkbox" checked />
+        <span>Copiar el audio a <code>assets/audio/</code> al guardar (requiere <code>./serve.sh</code>)</span>
+      </label>
+    </section>
+
+    <section class="panel" aria-labelledby="paso-2">
+      <header class="panel-head">
+        <span class="step">2</span>
+        <div>
+          <h2 id="paso-2">Pega la letra</h2>
+          <p>Una línea de la canción por renglón. Los renglones vacíos se descartan.</p>
+        </div>
+      </header>
+
+      <textarea id="lyrics-input" class="textarea" rows="8" spellcheck="false"
+        placeholder="It's a New York state of mind…&#10;(pega aquí la letra completa, un verso por renglón)"></textarea>
+
+      <div class="panel-actions">
+        <button id="btn-build" class="btn btn-primary" type="button">Preparar líneas</button>
+        <button id="btn-clear" class="btn btn-ghost" type="button">Vaciar</button>
+        <span id="build-info" class="build-info"></span>
+      </div>
+    </section>
+
+    <section class="panel panel-wide" aria-labelledby="paso-3">
+      <header class="panel-head">
+        <span class="step">3</span>
+        <div>
+          <h2 id="paso-3">Marca el inicio de cada línea</h2>
+          <p>
+            Dale play y pulsa <kbd>espacio</kbd> justo cuando empieza cada verso:
+            queda marcada la línea seleccionada y salta a la siguiente.
+            También puedes hacer clic en una línea para colocar el cursor y en
+            <strong>marcar</strong> para sellarla con el tiempo actual.
+          </p>
+        </div>
+      </header>
+
+      <div class="sync-grid">
+        <ol id="rows" class="rows" aria-label="Líneas a sincronizar">
+          <li class="rows-empty">Todavía no hay líneas. Pega la letra en el paso 2.</li>
+        </ol>
+
+        <aside class="side">
+          <div class="side-card">
+            <h3>Estado</h3>
+            <dl class="mini-stats">
+              <div><dt>Marcadas</dt><dd id="st-done">0</dd></div>
+              <div><dt>Total</dt><dd id="st-total">0</dd></div>
+              <div><dt>Audio</dt><dd id="st-dur">0:00</dd></div>
+            </dl>
+            <p class="side-note" id="st-note">Carga el audio y prepara las líneas para empezar.</p>
+          </div>
+
+          <div class="side-card">
+            <h3>Ajuste fino</h3>
+            <div class="nudge">
+              <button class="btn btn-chip" type="button" data-nudge="-0.5">−0,5 s</button>
+              <button class="btn btn-chip" type="button" data-nudge="-0.1">−0,1 s</button>
+              <button class="btn btn-chip" type="button" data-nudge="0.1">+0,1 s</button>
+              <button class="btn btn-chip" type="button" data-nudge="0.5">+0,5 s</button>
+            </div>
+            <div class="nudge">
+              <button id="btn-set-now" class="btn btn-chip" type="button">Usar tiempo actual</button>
+              <button id="btn-undo" class="btn btn-chip" type="button">Deshacer</button>
+            </div>
+            <p class="side-note">Ajusta la línea seleccionada. La marca se coloca
+              <strong>al principio</strong> del verso, no en la sílaba fuerte.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="panel panel-wide" aria-labelledby="paso-4">
+      <header class="panel-head">
+        <span class="step">4</span>
+        <div>
+          <h2 id="paso-4">Exporta</h2>
+          <p>El <code>end</code> de cada línea se calcula solo: es el <code>start</code> de la siguiente.</p>
+        </div>
+      </header>
+
+      <div class="export-grid">
+        <div class="export-main">
+          <pre id="json-preview" class="json-preview">{ }</pre>
+          <div class="panel-actions">
+            <button id="btn-save" class="btn btn-primary" type="button" disabled>Guardar en el proyecto</button>
+            <button id="btn-download" class="btn btn-ghost" type="button" disabled>Descargar JSON</button>
+            <button id="btn-copy" class="btn btn-ghost" type="button" disabled>Copiar</button>
+            <label class="btn btn-ghost file-label">
+              <input id="file-json" type="file" accept="application/json,.json,.lrc,text/plain" hidden />
+              Importar JSON o LRC
+            </label>
+          </div>
+          <p class="side-note" id="save-note"></p>
+        </div>
+
+        <aside class="export-side">
+          <h3>Qué pasa al guardar</h3>
+          <p class="side-note">
+            Se escribe <code>data/tracks/&lt;id&gt;.json</code> y se agrega la canción a
+            <code>data/tracks.json</code>. Si marcaste «copiar el audio», también se
+            guarda en <code>assets/audio/</code>.
+          </p>
+          <p class="side-note">
+            Sin el servidor del proyecto, usa <strong>Descargar JSON</strong> y coloca
+            el archivo a mano.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="transport studio-transport" role="group" aria-label="Controles del estudio">
+    <div class="progress-wrap">
+      <div id="progress" class="progress" role="slider" tabindex="0" aria-label="Progreso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-fill" id="progress-fill"></div>
+        <div class="progress-ticks" id="progress-ticks"></div>
+        <div class="progress-knob" id="progress-knob"></div>
+      </div>
+      <div class="progress-times">
+        <span id="time-current">0:00</span>
+        <span id="time-total">0:00</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="btn-play" class="btn btn-play" type="button" aria-label="Reproducir">
+        <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+      </button>
+      <button id="btn-back" class="btn btn-icon" type="button" title="Retroceder 5 s (←)" aria-label="Retroceder 5 segundos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+      </button>
+      <button id="btn-fwd" class="btn btn-icon" type="button" title="Avanzar 5 s (→)" aria-label="Avanzar 5 segundos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>
+      </button>
+
+      <button id="btn-stamp" class="stamp" type="button">
+        <span class="stamp-key">espacio</span>
+        <span class="stamp-label">Marcar línea <b id="stamp-target">—</b></span>
+      </button>
+
+      <div class="controls-right">
+        <button id="btn-speed" class="btn btn-ghost btn-small" type="button" title="Velocidad">1×</button>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<audio id="audio" preload="metadata"></audio>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/sync.js"></script>
+</body>
+</html>

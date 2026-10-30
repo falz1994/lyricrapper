@@ -1,0 +1,55 @@
+{
+  "id": "demo-beat",
+  "title": "Demo Beat",
+  "artist": "Lyric Rapper",
+  "album": "Piloto",
+  "kicker": "Demostración",
+  "audio": "assets/audio/demo-beat.webm",
+  "duration": 44.667,
+  "bpm": 90,
+  "language": "es",
+  "notes": "Instrumental sintetizado por tools/make_demo_beat.py. Sin voces: sirve para probar el salto por línea.",
+  "lines": [
+    {
+      "start": 0.25,
+      "end": 5.583,
+      "text": "Esto es un piloto, no la canción real"
+    },
+    {
+      "start": 5.583,
+      "end": 10.916,
+      "text": "un beat de metrónomo pa' probar el ritual"
+    },
+    {
+      "start": 10.917,
+      "end": 16.25,
+      "text": "toca una línea y el audio salta justo ahí"
+    },
+    {
+      "start": 16.25,
+      "end": 21.583,
+      "text": "sin cortar la primera sílaba, todo fluye así"
+    },
+    {
+      "start": 21.583,
+      "end": 26.916,
+      "text": "cada verso guarda su start y su end"
+    },
+    {
+      "start": 26.917,
+      "end": 32.25,
+      "text": "en un JSON liviano que el navegador lee"
+    },
+    {
+      "start": 32.25,
+      "end": 37.583,
+      "text": "marca tú los tiempos con el estudio sync"
+    },
+    {
+      "start": 37.583,
+      "end": 42.916,
+      "text": "y la letra y la música van a la vez"
+    }
+  ],
+  "audioFallback": "assets/audio/demo-beat.mp3"
+}

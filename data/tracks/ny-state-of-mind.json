@@ -1,0 +1,459 @@
+{
+  "id": "ny-state-of-mind",
+  "title": "N.Y. State of Mind",
+  "artist": "Nas",
+  "album": "Illmatic",
+  "kicker": "Alineado automáticamente (small)",
+  "audio": "assets/audio/nasny.webm",
+  "duration": 295.59,
+  "bpm": null,
+  "language": "en",
+  "lines": [
+    {
+      "start": 7.1,
+      "end": 7.1,
+      "text": "Yeah, yeah"
+    },
+    {
+      "start": 7.1,
+      "end": 7.1,
+      "text": "Ayo Black, it's time, word (word, it's time, man)"
+    },
+    {
+      "start": 7.1,
+      "end": 7.1,
+      "text": "It's time, man (a'ight, man, begin)"
+    },
+    {
+      "start": 7.1,
+      "end": 7.1,
+      "text": "Yeah, straight out the fuckin' dungeons of rap"
+    },
+    {
+      "start": 7.1,
+      "end": 18.3,
+      "text": "Where fake niggas don't make it back"
+    },
+    {
+      "start": 18.3,
+      "end": 21.96,
+      "text": "I don't know how to start this shit, yo, now"
+    },
+    {
+      "start": 21.96,
+      "end": 26.14,
+      "text": "Rappers, I monkey flip 'em with the funky rhythm"
+    },
+    {
+      "start": 26.14,
+      "end": 31.38,
+      "text": "I be kickin', musician inflictin' composition of pain, I'm like Scarface sniffin' cocaine"
+    },
+    {
+      "start": 31.38,
+      "end": 34.787,
+      "text": "Holdin' an M16, see, with the pen I'm extreme"
+    },
+    {
+      "start": 34.787,
+      "end": 36.84,
+      "text": "Now, bullet holes left in my peepholes"
+    },
+    {
+      "start": 36.84,
+      "end": 40.652,
+      "text": "I'm suited up with street clothes, hand me a .9, and I'll defeat foes"
+    },
+    {
+      "start": 40.652,
+      "end": 43.18,
+      "text": "Y'all know my steelo, with or without the airplay"
+    },
+    {
+      "start": 43.18,
+      "end": 46.273,
+      "text": "I keep some E&J, sittin' bent up in the stairway"
+    },
+    {
+      "start": 46.273,
+      "end": 49.12,
+      "text": "Or either on the corner bettin' Grants with the cee-lo champs"
+    },
+    {
+      "start": 49.12,
+      "end": 51.92,
+      "text": "Laughin' at base-heads, tryna sell some broken amps"
+    },
+    {
+      "start": 51.92,
+      "end": 54.98,
+      "text": "G-packs get off quick, forever niggas talk shit"
+    },
+    {
+      "start": 54.98,
+      "end": 57.56,
+      "text": "Reminiscin' about the last time the task force flipped"
+    },
+    {
+      "start": 57.56,
+      "end": 59.9,
+      "text": "Niggas be runnin' through the block shootin'"
+    },
+    {
+      "start": 59.9,
+      "end": 62.88,
+      "text": "Time to start the revolution, catch a body, head for Houston"
+    },
+    {
+      "start": 62.88,
+      "end": 66.12,
+      "text": "Once they caught us off-guard, the MAC-10 was in the grass, and"
+    },
+    {
+      "start": 66.12,
+      "end": 68.93,
+      "text": "I ran like a cheetah, with thoughts of an assassin"
+    },
+    {
+      "start": 68.93,
+      "end": 71.9,
+      "text": "Picked the MAC up, told brothers \"Back up!\", the MAC spit"
+    },
+    {
+      "start": 71.9,
+      "end": 74.52,
+      "text": "Lead was hittin' niggas, one ran, I made him back-flip"
+    },
+    {
+      "start": 74.52,
+      "end": 77.38,
+      "text": "Heard a few chicks scream, my arm shook, couldn't look"
+    },
+    {
+      "start": 77.38,
+      "end": 80.42,
+      "text": "Gave another squeeze, heard it click, \"Yo, my shit is stuck!\""
+    },
+    {
+      "start": 80.42,
+      "end": 82.94,
+      "text": "Tried to cock it, it wouldn't shoot, now I'm in danger"
+    },
+    {
+      "start": 82.94,
+      "end": 86.16,
+      "text": "Finally, pulled it back and saw three bullets caught up in the chamber"
+    },
+    {
+      "start": 86.16,
+      "end": 88.22,
+      "text": "So, now I'm jettin' to the buildin' lobby"
+    },
+    {
+      "start": 88.22,
+      "end": 91.46,
+      "text": "And it was full of children, prob'ly couldn't see as high as I be"
+    },
+    {
+      "start": 91.46,
+      "end": 93.56,
+      "text": "(So, what you sayin'?) It's like the game ain't the same"
+    },
+    {
+      "start": 93.56,
+      "end": 97.08,
+      "text": "Got younger niggas pullin' the triggers, bringin' fame to their name"
+    },
+    {
+      "start": 97.08,
+      "end": 100.065,
+      "text": "And claim some corners, crews without guns are goners"
+    },
+    {
+      "start": 100.065,
+      "end": 103.23,
+      "text": "In broad daylight, stick-up kids, they run up on us"
+    },
+    {
+      "start": 103.23,
+      "end": 105.3,
+      "text": ".45's and gauges, MAC's in fact"
+    },
+    {
+      "start": 105.3,
+      "end": 109.08,
+      "text": "Same niggas will catch you back-to-back, snatchin' your cracks in black"
+    },
+    {
+      "start": 109.08,
+      "end": 111.66,
+      "text": "There was a snitch on the block gettin' niggas knocked"
+    },
+    {
+      "start": 111.66,
+      "end": 113.82,
+      "text": "So hold your stash 'til the coke price drop"
+    },
+    {
+      "start": 113.82,
+      "end": 116.68,
+      "text": "I know this crackhead who said she gotta smoke nice rock"
+    },
+    {
+      "start": 116.68,
+      "end": 119.58,
+      "text": "And if it's good, she'll bring you customers and measuring pots"
+    },
+    {
+      "start": 119.58,
+      "end": 121.94,
+      "text": "But yo, you gotta slide on a vacation"
+    },
+    {
+      "start": 121.94,
+      "end": 125.84,
+      "text": "Inside information keeps large niggas erasin' and their wives basin'"
+    },
+    {
+      "start": 125.84,
+      "end": 128.18,
+      "text": "It drops deep as it does in my breath"
+    },
+    {
+      "start": 128.18,
+      "end": 131.06,
+      "text": "I never sleep, 'cause sleep is the cousin of death"
+    },
+    {
+      "start": 131.06,
+      "end": 133.94,
+      "text": "Beyond the walls of intelligence, life is defined"
+    },
+    {
+      "start": 133.94,
+      "end": 140.74,
+      "text": "I think of crime when I'm in a New York State of Mind"
+    },
+    {
+      "start": 140.74,
+      "end": 147.474,
+      "text": "New York state of mind"
+    },
+    {
+      "start": 147.474,
+      "end": 147.642,
+      "text": "New York state of mind"
+    },
+    {
+      "start": 147.642,
+      "end": 147.811,
+      "text": "New York state of mind"
+    },
+    {
+      "start": 147.811,
+      "end": 147.979,
+      "text": "New York state of mind"
+    },
+    {
+      "start": 147.979,
+      "end": 151.209,
+      "text": "Be havin' dreams that I'm a gangsta, drinkin' Moëts, holdin' TEC's"
+    },
+    {
+      "start": 151.209,
+      "end": 154.34,
+      "text": "Makin' sure the cash came correct, then I stepped"
+    },
+    {
+      "start": 154.34,
+      "end": 157.947,
+      "text": "Investments in stocks, sewin' up the blocks to sell rocks"
+    },
+    {
+      "start": 157.947,
+      "end": 159.62,
+      "text": "Winnin' gunfights with mega-cops"
+    },
+    {
+      "start": 159.62,
+      "end": 162.38,
+      "text": "But just a nigga walkin' with his finger on the trigger"
+    },
+    {
+      "start": 162.38,
+      "end": 165.24,
+      "text": "Make enough figures until my pockets get bigger"
+    },
+    {
+      "start": 165.24,
+      "end": 168.12,
+      "text": "I ain't the type of brother made for you to start testin'"
+    },
+    {
+      "start": 168.12,
+      "end": 171.42,
+      "text": "Give me a Smith & Wesson, I'll have niggas undressin'"
+    },
+    {
+      "start": 171.42,
+      "end": 173.78,
+      "text": "Thinkin' of cash flow, Buddha, and shelter"
+    },
+    {
+      "start": 173.78,
+      "end": 176.7,
+      "text": "Whenever frustrated, I'ma hijack Delta"
+    },
+    {
+      "start": 176.7,
+      "end": 179.46,
+      "text": "In the PJ's, my blend tape plays, bullets are strays"
+    },
+    {
+      "start": 179.46,
+      "end": 182.2,
+      "text": "Young bitches is grazed, each block is like a maze"
+    },
+    {
+      "start": 182.2,
+      "end": 185.04,
+      "text": "Full of black rats trapped, plus the Island is packed"
+    },
+    {
+      "start": 185.04,
+      "end": 188.26,
+      "text": "From what I hear in all the stories when my peoples come back black"
+    },
+    {
+      "start": 188.26,
+      "end": 190.2,
+      "text": "I'm livin' where the nights is jet-black"
+    },
+    {
+      "start": 190.2,
+      "end": 193.78,
+      "text": "The fiends fight to get crack, I just max, I dream I can sit back"
+    },
+    {
+      "start": 193.78,
+      "end": 196.488,
+      "text": "And lamp like Capone, with drug scripts sewn"
+    },
+    {
+      "start": 196.488,
+      "end": 199.62,
+      "text": "Or the legal luxury life, rings flooded with stones, homes"
+    },
+    {
+      "start": 199.62,
+      "end": 202.1,
+      "text": "I got so many rhymes, I don't think I'm too sane"
+    },
+    {
+      "start": 202.1,
+      "end": 204.76,
+      "text": "Life is parallel to Hell, but I must maintain"
+    },
+    {
+      "start": 204.76,
+      "end": 207.06,
+      "text": "And be prosperous, though we live dangerous"
+    },
+    {
+      "start": 207.06,
+      "end": 210.9,
+      "text": "Cops could just arrest me, blamin' us, we're held like hostages"
+    },
+    {
+      "start": 210.9,
+      "end": 213.5,
+      "text": "It's only right that I was born to use mics"
+    },
+    {
+      "start": 213.5,
+      "end": 216.14,
+      "text": "And the stuff that I write is even tougher than dykes"
+    },
+    {
+      "start": 216.14,
+      "end": 219.48,
+      "text": "I'm takin' rappers to a new plateau, through rap slow"
+    },
+    {
+      "start": 219.48,
+      "end": 222.16,
+      "text": "My rhymin' is a vitamin held without a capsule"
+    },
+    {
+      "start": 222.16,
+      "end": 224.52,
+      "text": "The smooth criminal on beat breaks"
+    },
+    {
+      "start": 224.52,
+      "end": 227.42,
+      "text": "Never put me in your box if your shit eats tapes"
+    },
+    {
+      "start": 227.42,
+      "end": 230.52,
+      "text": "The city never sleeps, full of villains and creeps"
+    },
+    {
+      "start": 230.52,
+      "end": 233.324,
+      "text": "That's where I learned to do my hustle, had to scuffle with freaks"
+    },
+    {
+      "start": 233.324,
+      "end": 236.68,
+      "text": "I'm a addict for sneakers, 20's of Buddha and bitches with beepers"
+    },
+    {
+      "start": 236.68,
+      "end": 239.62,
+      "text": "In the streets I can greet ya, about blunts I teach ya"
+    },
+    {
+      "start": 239.62,
+      "end": 241.74,
+      "text": "Inhale deep like the words of my breath"
+    },
+    {
+      "start": 241.74,
+      "end": 244.56,
+      "text": "I never sleep, 'cause sleep is the cousin of death"
+    },
+    {
+      "start": 244.56,
+      "end": 247.36,
+      "text": "I lay puzzled as I backtrack to earlier times"
+    },
+    {
+      "start": 247.36,
+      "end": 258.36,
+      "text": "Nothing's equivalent to the New York state of mind"
+    },
+    {
+      "start": 258.36,
+      "end": 258.36,
+      "text": "New York state of mind"
+    },
+    {
+      "start": 258.36,
+      "end": 258.36,
+      "text": "New York state of mind"
+    },
+    {
+      "start": 258.36,
+      "end": 258.36,
+      "text": "New York state of mind"
+    },
+    {
+      "start": 258.36,
+      "end": 295.59,
+      "text": "New York state of mind"
+    }
+  ],
+  "audioFallback": "assets/audio/nasny.mp3"
+}

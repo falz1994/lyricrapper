@@ -1,0 +1,7 @@
+# Dependencias del alineador automático (tools/align.py).
+#   pip install --target tools/pylib -r tools/requirements.txt
+# y ejecutar con:  PYTHONPATH=tools/pylib python3 tools/align.py ...
+faster-whisper>=1.1.0
+# faster-whisper 1.2.x todavía usa av.open(metadata_errors=...), que av 16+
+# eliminó. Sin este pin la transcripción falla con TypeError.
+av<16

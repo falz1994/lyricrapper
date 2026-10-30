@@ -1,0 +1,25 @@
+# dependencias locales del alineador (se recrean con tools/requirements.txt)
+tools/pylib/
+tools/models/
+
+# capturas y perfiles de Chrome de las pruebas
+.tmp/
+
+# audios y letras de terceros: no se versionan
+assets/audio/*.mp3
+assets/audio/*.m4a
+assets/audio/*.wav
+assets/audio/*.flac
+assets/audio/*.ogg
+assets/audio/*.webm
+!assets/audio/demo-beat.mp3
+!assets/audio/demo-beat.webm
+
+# copias de trabajo en la raíz del proyecto (fuente y letras de las canciones)
+/*.mp3
+/*.m4a
+letra-*.txt
+
+*.log
+.DS_Store
+__pycache__/

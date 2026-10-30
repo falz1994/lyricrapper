@@ -1,0 +1,28 @@
+{
+  "tracks": [
+    {
+      "id": "demo-beat",
+      "title": "Demo Beat",
+      "artist": "Lyric Rapper",
+      "file": "data/tracks/demo-beat.json"
+    },
+    {
+      "id": "ny-state-of-mind",
+      "title": "N.Y. State of Mind",
+      "artist": "Nas",
+      "file": "data/tracks/ny-state-of-mind.json"
+    },
+    {
+      "id": "cream",
+      "title": "C.R.E.A.M.",
+      "artist": "Wu-Tang Clan",
+      "file": "data/tracks/cream.json"
+    },
+    {
+      "id": "hail-mary",
+      "title": "Hail Mary",
+      "artist": "Makaveli",
+      "file": "data/tracks/hail-mary.json"
+    }
+  ]
+}
