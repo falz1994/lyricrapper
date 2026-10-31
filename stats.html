@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Analítica — Lyric Rapper</title>
+<style>
+  :root {
+    --bg: #0d0f14; --panel: #151922; --line: #232a37; --ink: #e8ecf4;
+    --muted: #8b95a8; --accent: #ffd166; --ok: #4ade80;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 20px 64px; background: var(--bg); color: var(--ink);
+    font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 880px; margin: 0 auto; }
+  h1 { font-size: 20px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .kpi b { display: block; font-size: 26px; font-weight: 650; letter-spacing: -0.02em; }
+  .kpi span { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; margin-bottom: 14px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 12px; }
+  .row { display: flex; align-items: center; gap: 10px; padding: 5px 0; font-variant-numeric: tabular-nums; }
+  .row .label { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row .bar { height: 6px; border-radius: 3px; background: var(--accent); min-width: 2px; opacity: .85; }
+  .row .n { color: var(--muted); width: 56px; text-align: right; font-size: 13px; }
+  .empty { color: var(--muted); font-size: 14px; }
+  .empty code { background: #0a0c11; border: 1px solid var(--line); padding: 1px 6px; border-radius: 5px; }
+  .err { color: #ff9f9f; }
+  .ok { color: var(--ok); }
+  footer { color: var(--muted); font-size: 12px; margin-top: 20px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Analítica</h1>
+  <div class="sub" id="sub">cargando…</div>
+
+  <div class="kpis">
+    <div class="kpi"><b id="k-total">—</b><span>eventos</span></div>
+    <div class="kpi"><b id="k-sessions">—</b><span>sesiones</span></div>
+    <div class="kpi"><b id="k-views">—</b><span>visitas</span></div>
+    <div class="kpi"><b id="k-clicks">—</b><span>clics en línea</span></div>
+  </div>
+
+  <section>
+    <h2>Eventos</h2>
+    <div id="events"><p class="empty">sin datos todavía</p></div>
+  </section>
+
+  <section>
+    <h2>Canciones</h2>
+    <div id="tracks"><p class="empty">sin datos todavía</p></div>
+  </section>
+
+  <section>
+    <h2>Líneas más clicadas</h2>
+    <div id="lines"><p class="empty">sin datos todavía</p></div>
+  </section>
+
+  <section>
+    <h2>Por día</h2>
+    <div id="days"><p class="empty">sin datos todavía</p></div>
+  </section>
+
+  <footer id="foot"></footer>
+</main>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+
+  function rows(container, entries, formatter = (k) => k) {
+    const items = Object.entries(entries || {});
+    if (!items.length) {
+      container.innerHTML = '<p class="empty">sin datos todavía</p>';
+      return;
+    }
+    const max = Math.max(...items.map(([, n]) => n)) || 1;
+    container.innerHTML = items.map(([key, n]) => `
+      <div class="row">
+        <span class="label">${formatter(key)}</span>
+        <span class="bar" style="width:${Math.round((n / max) * 42)}%"></span>
+        <span class="n">${n}</span>
+      </div>`).join('');
+  }
+
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  (async () => {
+    try {
+      const res = await fetch('/api/stats', { cache: 'no-store' });
+      const data = await res.json();
+
+      if (!res.ok || data.ok === false) {
+        $('sub').innerHTML = `<span class="err">${esc(data.error || 'no se pudo leer la analítica')}</span>`;
+        $('foot').textContent = 'En Vercel hace falta un almacén (Storage → Blob) para guardar los eventos.';
+        return;
+      }
+
+      const total = data.total || 0;
+      const ev = data.events || {};
+      $('sub').innerHTML = total
+        ? `<span class="ok">${total} eventos</span> · último dato ${esc(
+            Object.keys(data.days || {}).pop() || '—')}`
+        : 'todavía no hay eventos guardados';
+
+      $('k-total').textContent = total;
+      $('k-sessions').textContent = data.sessions ?? 0;
+      $('k-views').textContent = ev.pageview ?? 0;
+      $('k-clicks').textContent = ev.line_click ?? 0;
+
+      rows($('events'), ev);
+      rows($('tracks'), data.tracks);
+      rows($('lines'), data.lines, (k) => {
+        const [track, line] = k.split(':');
+        return `${esc(track)} · línea ${esc(line)}`;
+      });
+      rows($('days'), data.days);
+
+      $('foot').textContent = total
+        ? 'Datos de data/analytics.jsonl (servidor local).'
+        : 'Abre el reproductor y haz clic en alguna línea para generar eventos.';
+    } catch (err) {
+      $('sub').innerHTML = '<span class="err">no se pudo contactar con /api/stats</span>';
+      $('foot').textContent = String(err);
+    }
+  })();
+</script>
+</body>
+</html>
