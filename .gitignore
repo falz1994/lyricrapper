@@ -23,3 +23,6 @@ letra-*.txt
 *.log
 .DS_Store
 __pycache__/
+
+# eventos de la analítica local (no se versionan)
+data/analytics.jsonl

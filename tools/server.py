@@ -23,6 +23,7 @@ import json
 import os
 import re
 import sys
+from datetime import datetime, timezone
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -32,6 +33,7 @@ ROOT = Path(__file__).resolve().parent.parent
 AUDIO_DIR = ROOT / "assets" / "audio"
 TRACKS_DIR = ROOT / "data" / "tracks"
 INDEX = ROOT / "data" / "tracks.json"
+ANALYTICS = ROOT / "data" / "analytics.jsonl"   # eventos de assets/js/analytics.js
 
 SAFE_ID = re.compile(r"^[a-z0-9][a-z0-9._-]{0,60}$")
 SAFE_AUDIO = re.compile(r"^[A-Za-z0-9][A-Za-z0-9 ._-]{0,90}\.(mp3|m4a|ogg|opus|wav|flac)$", re.I)
@@ -81,6 +83,12 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         self.end_headers()
         self.wfile.write(body)
+
+    def _no_content(self) -> None:
+        """204 sin cuerpo (lo que espera sendBeacon)."""
+        self.send_response(HTTPStatus.NO_CONTENT)
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
 
     def _body(self, limit: int) -> bytes:
         length = int(self.headers.get("Content-Length") or 0)
@@ -154,10 +162,78 @@ class Handler(SimpleHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):                         # noqa: N802
-        if urlparse(self.path).path == "/api/ping":
+        path = urlparse(self.path).path
+        if path == "/api/ping":
             return self._json(200, {"ok": True, "studio": True})
+        if path == "/api/stats":
+            return self._json(200, self._stats())
         self._accept_ranges = True
         return super().do_GET()
+
+    # --- analítica local --------------------------------------------------
+    def _log_event(self) -> None:
+        """POST /api/event: guarda una línea JSON en data/analytics.jsonl."""
+        try:
+            payload = json.loads(self._body(8 * 1024))
+        except ValueError:
+            return self._json(400, {"ok": False, "error": "cuerpo inválido"})
+
+        if not isinstance(payload, dict) or not payload.get("event"):
+            return self._json(400, {"ok": False, "error": "falta event"})
+
+        entry = {
+            "t": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "event": str(payload.get("event"))[:40],
+            "sid": str(payload.get("sid") or "")[:64],
+            "path": str(payload.get("path") or "")[:200],
+            "track": str(payload.get("track") or "")[:60] or None,
+            "line": payload.get("line") if isinstance(payload.get("line"), int) else None,
+            "ref": str(payload.get("ref") or "")[:300] or None,
+        }
+        ANALYTICS.parent.mkdir(parents=True, exist_ok=True)
+        with ANALYTICS.open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps(entry, ensure_ascii=False) + "\n")
+        return self._no_content()
+
+    def _stats(self) -> dict:
+        """GET /api/stats: resumen de data/analytics.jsonl."""
+        if not ANALYTICS.exists():
+            return {"ok": True, "total": 0, "events": {}, "sessions": 0,
+                    "tracks": {}, "lines": {}, "days": {}}
+
+        events: dict[str, int] = {}
+        sessions: set[str] = set()
+        tracks: dict[str, int] = {}
+        lines: dict[str, int] = {}
+        days: dict[str, int] = {}
+        total = 0
+        for raw in ANALYTICS.read_text(encoding="utf-8").splitlines():
+            try:
+                e = json.loads(raw)
+            except ValueError:
+                continue
+            total += 1
+            events[e.get("event", "?")] = events.get(e.get("event", "?"), 0) + 1
+            if e.get("sid"):
+                sessions.add(e["sid"])
+            if e.get("track"):
+                tracks[e["track"]] = tracks.get(e["track"], 0) + 1
+            if e.get("track") and e.get("line"):
+                key = f"{e['track']}:{e['line']}"
+                lines[key] = lines.get(key, 0) + 1
+            day = str(e.get("t", ""))[:10]
+            if day:
+                days[day] = days.get(day, 0) + 1
+
+        return {
+            "ok": True,
+            "total": total,
+            "sessions": len(sessions),
+            "events": dict(sorted(events.items(), key=lambda kv: -kv[1])),
+            "tracks": dict(sorted(tracks.items(), key=lambda kv: -kv[1])),
+            "lines": dict(sorted(lines.items(), key=lambda kv: -kv[1])[:50]),
+            "days": dict(sorted(days.items())),
+        }
 
     def do_PUT(self):                         # noqa: N802
         url = urlparse(self.path)
@@ -183,7 +259,10 @@ class Handler(SimpleHTTPRequestHandler):
         })
 
     def do_POST(self):                        # noqa: N802
-        if urlparse(self.path).path != "/api/track":
+        path = urlparse(self.path).path
+        if path == "/api/event":
+            return self._log_event()
+        if path != "/api/track":
             return self._json(404, {"ok": False, "error": "ruta desconocida"})
 
         try:

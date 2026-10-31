@@ -230,6 +230,9 @@ async function loadTrack(id) {
   el.audio.playbackRate = Number(store('rate')) || 1;
   el.btnSpeed.textContent = `${el.audio.playbackRate}×`;
 
+  // analítica (silenciosa si no existe el módulo)
+  window.lrAnalytics?.track('track_open', { track: track.id });
+
   el.timeTotal.textContent = fmtTime(track.duration || 0);
   el.audio.addEventListener('error', onAudioError, { once: true });
   el.audio.addEventListener('loadedmetadata', onMetadata, { once: true });
@@ -375,6 +378,7 @@ function seekToLine(i, { play = true, fromClick = false } = {}) {
   }
   syncActive(true);
   if (fromClick) {
+    window.lrAnalytics?.track('line_click', { track: state.track?.id, line: i + 1 });
     const elLine = el.lyrics.children[i];
     if (elLine && !isLineVisible(elLine)) {
       state.manualScrollUntil = 0;
@@ -612,6 +616,7 @@ function wireEvents() {
   el.audio.addEventListener('play', () => {
     document.body.classList.add('is-playing');
     el.btnPlay.setAttribute('aria-label', 'Pausar');
+    window.lrAnalytics?.track('play', { track: state.track?.id });
     startLoop();
   });
 

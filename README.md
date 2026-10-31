@@ -202,25 +202,84 @@ Y queda en el selector del reproductor.
 
 ---
 
+## Publicarlo: URL privada y analítica
+
+El despliegue es estático (Vercel). Dos piezas lo convierten en algo privado y
+medible, sin cuentas de terceros ni cookies de seguimiento.
+
+### Sólo entra quien tiene la URL
+
+`middleware.js` corre en el edge de Vercel y **devuelve 404 a todo** salvo que la
+petición traiga la clave. La clave no está en el repo (es público): se configura
+como variable de entorno.
+
+1. En Vercel → *Settings* → *Environment Variables*: `ACCESS_KEY` = una cadena
+   larga y aleatoria (`openssl rand -hex 24`).
+2. Redeploy.
+3. Entra una vez con `https://<sitio>/?k=<ACCESS_KEY>`: el middleware deja una
+   cookie `lr_access` de un año y redirige a la URL limpia (la clave no queda en
+   la barra de direcciones). A partir de ahí, todo normal.
+
+Detalles a propósito:
+
+- **Falla cerrado**: si `ACCESS_KEY` no está definida, el sitio devuelve 404. No
+  hay forma de dejarlo abierto por olvido.
+- Los intentos con `?k=` incorrecta también dan 404, no 401: no confirman que el
+  sitio exista.
+- `robots.txt` y la cabecera `X-Robots-Tag: noindex, nofollow` (en `vercel.json`)
+  lo mantienen fuera de los buscadores.
+
+En local no hay puerta: `tools/server.py` sirve sin clave, que es lo cómodo para
+trabajar.
+
+### Analítica
+
+`assets/js/analytics.js` emite cuatro eventos —`pageview`, `track_open`,
+`line_click`, `play`— a `/api/event`. Respeta *Do Not Track*, no usa cookies de
+terceros y sólo guarda un id aleatorio de sesión en `localStorage`.
+
+- **En Vercel**: cada evento queda como una línea en los logs del deployment
+  (Vercel → proyecto → *Logs*, busca `lr_event`). El plan gratuito guarda un día
+  de logs; para histórico hace falta conectar Vercel Blob o KV y cambiar el
+  `console.log` de `api/event.js` por la escritura.
+- **En local**: los eventos van a `data/analytics.jsonl` (ignorado por git) y hay
+  un resumen en `http://localhost:8088/api/stats`:
+
+```json
+{ "total": 4, "sessions": 2,
+  "events": { "line_click": 2, "pageview": 1, "track_open": 1 },
+  "tracks": { "cream": 3 }, "lines": { "cream:12": 2 } }
+```
+
+Para medir algo propio desde la consola del navegador:
+`lrAnalytics.track('evento', { track: 'cream' })`.
+
 ## Estructura
 
 ```
 index.html                 reproductor
 sync.html                  estudio para marcar los tiempos
+middleware.js              puerta de acceso (URL con clave) en el edge de Vercel
+api/event.js               endpoint de analítica (logs en Vercel)
 assets/css/styles.css      estilos del reproductor (y base del estudio)
 assets/css/sync.css        estilos propios del estudio
 assets/js/app.js           lógica del reproductor
 assets/js/sync.js          lógica del estudio
-assets/audio/              aquí van los audios (mp3/m4a/ogg)
+assets/js/analytics.js     eventos de uso (pageview, track_open, line_click, play)
+assets/audio/              aquí van los audios (mp3/m4a/ogg/webm)
 data/tracks.json           índice de canciones
 data/tracks/<id>.json      una canción con sus líneas y tiempos
-tools/server.py            servidor local (estático + API de guardado)
+tools/server.py            servidor local (estático + guardado + analítica)
 tools/align.py             alineación automática con Whisper
+tools/gcp_align.py         alineación con Google Cloud Speech-to-Text
+tools/optimize_audio.py    audio a Opus 64k + respaldo mp3
+tools/set_audio_host.py    apunta los audios a un host externo (R2, CDN…)
 tools/sync_tool.py         fuente → audio + letra → canción (la automática)
 tools/add_song.py          audio + letra → canción (atajo de lo anterior)
 tools/songkit.py           utilidades compartidas por las dos herramientas
 tools/make_demo_beat.py    genera la pista de demostración
 tools/smoke.mjs            prueba automática del reproductor (Chrome headless)
+vercel.json                cabeceras de caché, MIME del webm y noindex
 serve.sh                   atajo: arranca el servidor
 ```
 

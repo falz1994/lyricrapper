@@ -1,0 +1,3 @@
+# Sitio privado: no se indexa ni se enlaza desde ningún sitio.
+User-agent: *
+Disallow: /
