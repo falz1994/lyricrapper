@@ -26,3 +26,9 @@ __pycache__/
 
 # eventos de la analítica local (no se versionan)
 data/analytics.jsonl
+
+# credenciales locales (NUNCA se versionan)
+.env
+.env.*
+.vercel/
+.vercel
