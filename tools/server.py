@@ -29,7 +29,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(os.environ.get("LR_ROOT") or (Path(__file__).resolve().parent.parent)).resolve()
 AUDIO_DIR = ROOT / "assets" / "audio"
 TRACKS_DIR = ROOT / "data" / "tracks"
 INDEX = ROOT / "data" / "tracks.json"

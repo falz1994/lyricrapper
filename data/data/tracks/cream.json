@@ -1,0 +1,494 @@
+{
+  "id": "cream",
+  "title": "C.R.E.A.M.",
+  "artist": "Wu-Tang Clan",
+  "album": "Enter the Wu-Tang (36 Chambers)",
+  "kicker": "Alineado con Google Speech-to-Text",
+  "audio": "assets/audio/cream.webm",
+  "duration": 242.207,
+  "bpm": null,
+  "language": "en",
+  "lines": [
+    {
+      "start": 0.3,
+      "end": 2.19,
+      "text": "What that nigga want, God?"
+    },
+    {
+      "start": 2.19,
+      "end": 7.1,
+      "text": "Word up, look out for the cops though (wu-tang five finger shit, fam)"
+    },
+    {
+      "start": 7.1,
+      "end": 7.86,
+      "text": "Cash rules-"
+    },
+    {
+      "start": 7.86,
+      "end": 10.88,
+      "text": "Word up, two for fives over here, baby"
+    },
+    {
+      "start": 10.88,
+      "end": 15.04,
+      "text": "Word up, two for fives, niggas got garbage down the way"
+    },
+    {
+      "start": 15.04,
+      "end": 17.3,
+      "text": "Word up, know what I'm sayin'?"
+    },
+    {
+      "start": 17.3,
+      "end": 20.2,
+      "text": "Cash rules everything around me, C.R.E.A.M., get-"
+    },
+    {
+      "start": 20.2,
+      "end": 20.6,
+      "text": "Yeah, check this old fly shit out, word up"
+    },
+    {
+      "start": 20.6,
+      "end": 20.9,
+      "text": "take you on a natural joint"
+    },
+    {
+      "start": 20.9,
+      "end": 21.2,
+      "text": "(C.R.E.A.M. get the money)"
+    },
+    {
+      "start": 21.2,
+      "end": 21.6,
+      "text": "(Dollar, dollar bill, y'all) here we, here we go, check this shit, yo"
+    },
+    {
+      "start": 21.6,
+      "end": 25.9,
+      "text": "I grew up on the crime side, the New York Times side"
+    },
+    {
+      "start": 25.9,
+      "end": 27.533,
+      "text": "Stayin' alive was no jive"
+    },
+    {
+      "start": 27.533,
+      "end": 30.4,
+      "text": "Had second hands, Mom's bounced on old man"
+    },
+    {
+      "start": 30.4,
+      "end": 32.7,
+      "text": "So then we moved to Shaolin' land"
+    },
+    {
+      "start": 32.7,
+      "end": 36.0,
+      "text": "A young youth, yo, rockin' the gold tooth, 'Lo goose"
+    },
+    {
+      "start": 36.0,
+      "end": 38.6,
+      "text": "Only way I begin the G off was drug loot"
+    },
+    {
+      "start": 38.6,
+      "end": 40.4,
+      "text": "And let's start it like this, son"
+    },
+    {
+      "start": 40.4,
+      "end": 44.0,
+      "text": "Rollin' with this one and that one, pullin' out gats for fun"
+    },
+    {
+      "start": 44.0,
+      "end": 47.1,
+      "text": "But it was just a dream for the teen who was a fiend"
+    },
+    {
+      "start": 47.1,
+      "end": 49.0,
+      "text": "Started smokin' woolies at 16"
+    },
+    {
+      "start": 49.0,
+      "end": 52.65,
+      "text": "And runnin' up in gates and doin' hits for high stakes"
+    },
+    {
+      "start": 52.65,
+      "end": 54.6,
+      "text": "Makin' my way on fire escapes"
+    },
+    {
+      "start": 54.6,
+      "end": 57.6,
+      "text": "No question, I would speed for cracks and weed"
+    },
+    {
+      "start": 57.6,
+      "end": 59.9,
+      "text": "The combination made my eyes bleed"
+    },
+    {
+      "start": 59.9,
+      "end": 62.8,
+      "text": "No question, I would flow off and try to get the dough all"
+    },
+    {
+      "start": 62.8,
+      "end": 65.0,
+      "text": "Stickin' up white boys in ball courts"
+    },
+    {
+      "start": 65.0,
+      "end": 68.6,
+      "text": "My life got no better, same damn 'Lo sweater"
+    },
+    {
+      "start": 68.6,
+      "end": 70.7,
+      "text": "Times is rough and tough like leather"
+    },
+    {
+      "start": 70.7,
+      "end": 72.7,
+      "text": "Figured out I went the wrong route"
+    },
+    {
+      "start": 72.7,
+      "end": 76.4,
+      "text": "So I got with a sick-ass clique and went all out"
+    },
+    {
+      "start": 76.4,
+      "end": 77.9,
+      "text": "Catchin' keys from 'cross seas"
+    },
+    {
+      "start": 77.9,
+      "end": 81.2,
+      "text": "Rollin' in MPVs, every week we made 40 G's"
+    },
+    {
+      "start": 81.2,
+      "end": 84.1,
+      "text": "Yo, nigga, respect mine, or here go the TEC-9"
+    },
+    {
+      "start": 84.1,
+      "end": 86.4,
+      "text": "Ch-chick-pow! Move from the gate now"
+    },
+    {
+      "start": 86.4,
+      "end": 88.433,
+      "text": "Cash rules everything around me"
+    },
+    {
+      "start": 88.433,
+      "end": 89.6,
+      "text": "C.R.E.A.M., get the money"
+    },
+    {
+      "start": 89.6,
+      "end": 90.8,
+      "text": "Dollar, dollar bill, y'all"
+    },
+    {
+      "start": 90.8,
+      "end": 93.7,
+      "text": "Cash rules everything around me"
+    },
+    {
+      "start": 93.7,
+      "end": 94.7,
+      "text": "C.R.E.A.M., get the money"
+    },
+    {
+      "start": 94.7,
+      "end": 96.6,
+      "text": "Dollar, dollar bill, y'all"
+    },
+    {
+      "start": 96.6,
+      "end": 99.5,
+      "text": "It's been 22 long, hard years, I'm still strugglin'"
+    },
+    {
+      "start": 99.5,
+      "end": 102.4,
+      "text": "Survival got me buggin', but I'm alive on arrival"
+    },
+    {
+      "start": 102.4,
+      "end": 104.75,
+      "text": "I peep at the shape of the streets"
+    },
+    {
+      "start": 104.75,
+      "end": 107.4,
+      "text": "And stay awake to the ways of the world 'cause shit is deep"
+    },
+    {
+      "start": 107.4,
+      "end": 110.317,
+      "text": "A man with a dream with plans to make cream"
+    },
+    {
+      "start": 110.317,
+      "end": 112.6,
+      "text": "Which failed, I went to jail at the age of 15"
+    },
+    {
+      "start": 112.6,
+      "end": 115.7,
+      "text": "A young buck sellin' drugs and such, who never had much"
+    },
+    {
+      "start": 115.7,
+      "end": 117.9,
+      "text": "Tryin' to get a clutch at what I could not"
+    },
+    {
+      "start": 117.9,
+      "end": 121.1,
+      "text": "The court played me short, now I face incarceration"
+    },
+    {
+      "start": 121.1,
+      "end": 123.775,
+      "text": "Pacin', goin' upstate's my destination"
+    },
+    {
+      "start": 123.775,
+      "end": 126.3,
+      "text": "Handcuffed in the back of a bus, 40 of us"
+    },
+    {
+      "start": 126.3,
+      "end": 128.7,
+      "text": "Life as a shorty shouldn't be so rough"
+    },
+    {
+      "start": 128.7,
+      "end": 131.75,
+      "text": "But as the world turned, I learned life is hell"
+    },
+    {
+      "start": 131.75,
+      "end": 134.2,
+      "text": "Livin' in the world no different from a cell"
+    },
+    {
+      "start": 134.2,
+      "end": 136.975,
+      "text": "Every day I 'scape from Jakes givin' chase"
+    },
+    {
+      "start": 136.975,
+      "end": 139.4,
+      "text": "Sellin' base, smokin' bones in the staircase"
+    },
+    {
+      "start": 139.4,
+      "end": 142.2,
+      "text": "Though I don't know why I chose to smoke sess"
+    },
+    {
+      "start": 142.2,
+      "end": 144.5,
+      "text": "I guess that's the time when I'm not depressed"
+    },
+    {
+      "start": 144.5,
+      "end": 147.5,
+      "text": "But I'm still depressed, and I ask: What's it worth?"
+    },
+    {
+      "start": 147.5,
+      "end": 150.0,
+      "text": "Ready to give up, so I seek the old Earth"
+    },
+    {
+      "start": 150.0,
+      "end": 152.6,
+      "text": "Who explained workin' hard may help you maintain"
+    },
+    {
+      "start": 152.6,
+      "end": 155.433,
+      "text": "To learn to overcome the heartaches and pain"
+    },
+    {
+      "start": 155.433,
+      "end": 159.1,
+      "text": "We got stick-up kids, corrupt cops, and crack rocks and stray shots"
+    },
+    {
+      "start": 159.1,
+      "end": 160.7,
+      "text": "All on the block that stays hot"
+    },
+    {
+      "start": 160.7,
+      "end": 163.2,
+      "text": "Leave it up to me while I be livin' proof"
+    },
+    {
+      "start": 163.2,
+      "end": 165.95,
+      "text": "To kick the truth to the young black youth"
+    },
+    {
+      "start": 165.95,
+      "end": 168.7,
+      "text": "But shorty's runnin' wild, smokin' sess, drinkin' beer"
+    },
+    {
+      "start": 168.7,
+      "end": 171.4,
+      "text": "And ain't tryna hear what I'm kickin' in his ear"
+    },
+    {
+      "start": 171.4,
+      "end": 174.7,
+      "text": "Neglected for now, but yo, it gots to be accepted"
+    },
+    {
+      "start": 174.7,
+      "end": 176.9,
+      "text": "That what? That life is hectic"
+    },
+    {
+      "start": 176.9,
+      "end": 178.8,
+      "text": "Cash rules everything around me"
+    },
+    {
+      "start": 178.8,
+      "end": 180.0,
+      "text": "C.R.E.A.M., get the money"
+    },
+    {
+      "start": 180.0,
+      "end": 181.3,
+      "text": "Dollar, dollar bill, y'all"
+    },
+    {
+      "start": 181.3,
+      "end": 184.0,
+      "text": "Cash rules everything around me (my niggas gots to do what they gotta do)"
+    },
+    {
+      "start": 184.0,
+      "end": 185.3,
+      "text": "C.R.E.A.M., get the money"
+    },
+    {
+      "start": 185.3,
+      "end": 186.7,
+      "text": "Dollar, dollar bill, y'all (to get through, know what I'm sayin'?)"
+    },
+    {
+      "start": 186.7,
+      "end": 189.4,
+      "text": "Cash rules everything around me (because you can't just get by no more)"
+    },
+    {
+      "start": 189.4,
+      "end": 190.7,
+      "text": "C.R.E.A.M., get the money"
+    },
+    {
+      "start": 190.7,
+      "end": 192.8,
+      "text": "Dollar, dollar bill, y'all (word up, you gotta get over, straight up and down)"
+    },
+    {
+      "start": 192.8,
+      "end": 194.5,
+      "text": "Cash rules everything around me"
+    },
+    {
+      "start": 194.5,
+      "end": 196.0,
+      "text": "C.R.E.A.M., get the money"
+    },
+    {
+      "start": 196.0,
+      "end": 197.7,
+      "text": "Dollar, dollar bill, y'all"
+    },
+    {
+      "start": 197.7,
+      "end": 208.8,
+      "text": "Yeah, yeah"
+    },
+    {
+      "start": 208.8,
+      "end": 210.8,
+      "text": "Cash rules everything around me"
+    },
+    {
+      "start": 210.8,
+      "end": 212.6,
+      "text": "C.R.E.A.M., get the money"
+    },
+    {
+      "start": 212.6,
+      "end": 213.3,
+      "text": "Dollar, dollar bill, y'all"
+    },
+    {
+      "start": 213.3,
+      "end": 216.2,
+      "text": "Cash rules everything around me"
+    },
+    {
+      "start": 216.2,
+      "end": 217.3,
+      "text": "C.R.E.A.M., get the money"
+    },
+    {
+      "start": 217.3,
+      "end": 219.5,
+      "text": "Dollar, dollar bill, y'all"
+    },
+    {
+      "start": 219.5,
+      "end": 221.6,
+      "text": "Cash rules everything around me"
+    },
+    {
+      "start": 221.6,
+      "end": 222.6,
+      "text": "C.R.E.A.M., get the money"
+    },
+    {
+      "start": 222.6,
+      "end": 224.0,
+      "text": "Dollar, dollar bill, y'all"
+    },
+    {
+      "start": 224.0,
+      "end": 225.0,
+      "text": "Cash rules everything around me"
+    },
+    {
+      "start": 225.0,
+      "end": 227.9,
+      "text": "C.R.E.A.M., get the money"
+    },
+    {
+      "start": 227.9,
+      "end": 242.207,
+      "text": "Dollar, dollar bill, y'all-all-all, yeah"
+    }
+  ],
+  "audioFallback": "assets/audio/cream.mp3"
+}
