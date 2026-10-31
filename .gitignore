@@ -14,6 +14,9 @@ assets/audio/*.ogg
 assets/audio/*.webm
 !assets/audio/demo-beat.mp3
 !assets/audio/demo-beat.webm
+# instrumental propia de N.Y. State of Mind
+!assets/audio/nasny.mp3
+!assets/audio/nasny.webm
 
 # copias de trabajo en la raíz del proyecto (fuente y letras de las canciones)
 /*.mp3
