@@ -267,7 +267,8 @@ assets/js/sync.js          lógica del estudio
 assets/js/analytics.js     eventos de uso (pageview, track_open, line_click, play)
 stats.html                 panel con el resumen de la analítica
 api/event.js               endpoint de analítica (logs en Vercel)
-api/stats.js               resumen en Vercel (necesita Storage → Blob)
+api/stats.js               resumen en Vercel (lee de Supabase)
+supabase/lr_events.sql     tabla de eventos + función de agregados
 assets/audio/              aquí van los audios (mp3/m4a/ogg/webm)
 data/tracks.json           índice de canciones
 data/tracks/<id>.json      una canción con sus líneas y tiempos

@@ -1,35 +1,55 @@
 /* Resumen de analítica en producción.
  *
- * En Vercel no hay base de datos: `api/event.js` escribe cada evento en los
- * logs del deployment (retención de un día en Hobby). Para que este endpoint
- * devuelva números hace falta un almacén:
+ * Llama a la función public.lr_stats() de Supabase (ver supabase/lr_events.sql),
+ * que agrega los eventos de public.lr_events. Devuelve el mismo JSON que
+ * tools/server.py en /api/stats, así que stats.html sirve en los dos sitios.
  *
- *   Vercel → Storage → Create Database → Blob
- *
- * Al crearlo, Vercel añade la variable BLOB_READ_WRITE_TOKEN al proyecto. Con
- * eso, api/event.js puede ir acumulando los eventos en un blob y este endpoint
- * devolver el mismo JSON que tools/server.py en /api/stats.
- *
- * Mientras no exista el almacén, responde 503 con el motivo: el panel
- * (stats.html) lo muestra tal cual en vez de un error opaco.
+ * Si falta configuración o la tabla aún no existe, responde 503 con el motivo
+ * en vez de un error opaco.
  */
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
   res.setHeader('cache-control', 'no-store');
 
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_KEY;
+
+  if (!url || !key) {
     res.statusCode = 503;
     return res.json({
       ok: false,
-      error: 'sin almacenamiento: los eventos se escriben en los logs del deployment (1 día)',
-      hint: 'Vercel → Storage → Create → Blob, y vuelve a desplegar. Después este panel tendrá histórico.',
+      error: 'sin almacenamiento configurado',
+      hint: 'Faltan SUPABASE_URL / SUPABASE_SERVICE_KEY en las variables del proyecto.',
       where: 'Vercel → proyecto → Logs → busca "lr_event"',
     });
   }
 
-  res.statusCode = 501;
-  return res.json({
-    ok: false,
-    error: 'almacén detectado, pero el lector todavía no está implementado',
-    hint: 'Avísame y lo conecto: api/event.js acumula en un blob y este endpoint lo agrega.',
-  });
+  try {
+    const r = await fetch(`${url.replace(/\/$/, '')}/rest/v1/rpc/lr_stats`, {
+      method: 'POST',
+      headers: {
+        apikey: key,
+        authorization: `Bearer ${key}`,
+        'content-type': 'application/json',
+      },
+      body: '{}',
+    });
+
+    if (!r.ok) {
+      const detail = (await r.text()).slice(0, 200);
+      res.statusCode = 503;
+      return res.json({
+        ok: false,
+        error: 'la base de datos no responde a lr_stats()',
+        hint: 'Ejecuta supabase/lr_events.sql en el SQL Editor de Supabase.',
+        detail,
+      });
+    }
+
+    const data = await r.json();
+    res.statusCode = 200;
+    return res.json(data);
+  } catch (err) {
+    res.statusCode = 502;
+    return res.json({ ok: false, error: String(err).slice(0, 200) });
+  }
 };
