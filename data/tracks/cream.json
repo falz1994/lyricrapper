@@ -4,6 +4,7 @@
   "artist": "Wu-Tang Clan",
   "album": "Enter the Wu-Tang (36 Chambers)",
   "kicker": "Alineado con Google Speech-to-Text",
+  "cover": "assets/covers/cream.jpg",
   "audio": "assets/audio/cream.webm",
   "duration": 242.207,
   "bpm": null,

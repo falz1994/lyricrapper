@@ -211,12 +211,11 @@ function renderQueue() {
  * paralelo y sin bloquear el reproductor. Si una falla, se queda en 0:00. */
 async function loadQueueDurations() {
   await Promise.all(state.tracks.map(async (t) => {
-    if (t.duration) { setQueueDuration(t.id, t.duration); return; }
+    if (t.duration && t.cover) { setQueueMeta(t.id, t); return; }
     try {
       const res = await fetch(t.file, { cache: 'force-cache' });
       if (!res.ok) return;
-      const track = await res.json();
-      if (track.duration) setQueueDuration(t.id, track.duration);
+      setQueueMeta(t.id, await res.json());
     } catch { /* la lista nunca debe romper la página */ }
   }));
 }
@@ -274,9 +273,42 @@ function markQueueActive(id) {
   }
 }
 
-function setQueueDuration(id, seconds) {
-  const slot = el.trackList?.querySelector(`.queue-item[data-id="${id}"] .queue-time`);
-  if (slot && seconds) slot.textContent = fmtTime(seconds);
+function setQueueMeta(id, track) {
+  if (!track) return;
+  const item = el.trackList?.querySelector(`.queue-item[data-id="${id}"]`);
+  if (!item) return;
+
+  const slot = item.querySelector('.queue-time');
+  if (slot && track.duration) slot.textContent = fmtTime(track.duration);
+
+  // miniatura de la portada del álbum
+  const idx = item.querySelector('.queue-index');
+  if (track.cover && idx && !idx.querySelector('.queue-cover')) {
+    const img = new Image();
+    img.className = 'queue-cover';
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.src = track.cover;
+    idx.prepend(img);
+  }
+}
+
+/* Portada real del álbum. Si el JSON no trae `cover` o la imagen falla, se
+ * queda el arte generado (trazado de metro + iniciales). */
+function setCoverArt(src) {
+  const art = el.coverArt;
+  art.classList.remove('has-image');
+  art.style.backgroundImage = '';
+  if (!src) return;
+
+  const probe = new Image();
+  probe.addEventListener('load', () => {
+    art.style.backgroundImage = `url("${src}")`;
+    art.classList.add('has-image');
+  });
+  probe.addEventListener('error', () => { /* se queda el arte generado */ });
+  probe.src = src;
 }
 
 function escapeHtml(str) {
@@ -319,9 +351,10 @@ async function loadTrack(id) {
   const artist = track.artist || meta.artist || '';
   el.trackTitle.textContent = title;
   el.trackArtist.textContent = artist;
-  el.coverKicker.textContent = track.kicker || 'Piloto';
+  el.coverKicker.textContent = track.album || track.kicker || 'Piloto';
   el.coverArt.dataset.initials = title
     .split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
+  setCoverArt(track.cover);
   el.statBpm.textContent = track.bpm ? `${track.bpm} BPM` : '—';
   el.select.value = track.id;
   if (el.pickerName) el.pickerName.textContent = title;
@@ -329,7 +362,7 @@ async function loadTrack(id) {
   el.picker?.setAttribute('title', `${title} — ${artist}`);
   markQueueActive(track.id);
   // la duración real vive en el JSON de la pista, no en el índice
-  if (track.duration) setQueueDuration(track.id, track.duration);
+  setQueueMeta(track.id, track);
   document.title = `${title} — Lyric Rapper`;
 
   // audio: Opus (webm) primero; si el navegador no lo traga, cae al mp3
