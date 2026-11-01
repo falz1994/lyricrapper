@@ -29,6 +29,12 @@
       "title": "Protect Ya Neck",
       "artist": "Wu-Tang Clan",
       "file": "data/tracks/protect-ya-neck.json"
+    },
+    {
+      "id": "big-pun-twinz",
+      "title": "Twinz (Deep Cover 98)",
+      "artist": "Big Pun",
+      "file": "data/tracks/big-pun-twinz.json"
     }
   ]
 }
