@@ -35,6 +35,12 @@
       "title": "Twinz (Deep Cover 98)",
       "artist": "Big Pun",
       "file": "data/tracks/big-pun-twinz.json"
+    },
+    {
+      "id": "mass-appeal",
+      "title": "Mass Appeal",
+      "artist": "Gang Starr",
+      "file": "data/tracks/mass-appeal.json"
     }
   ]
 }
