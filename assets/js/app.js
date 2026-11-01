@@ -18,6 +18,8 @@ const el = {
   audio: $('#audio'),
   lyrics: $('#lyrics'),
   select: $('#track-select'),
+  trackList: $('#track-list'),
+  queueCount: $('#queue-count'),
   banner: $('#banner'),
   bannerTitle: $('#banner-title'),
   bannerText: $('#banner-text'),
@@ -159,13 +161,80 @@ function renderTrackSelect() {
   el.select.innerHTML = state.tracks
     .map(t => `<option value="${t.id}">${escapeHtml(t.title)} — ${escapeHtml(t.artist || '')}</option>`)
     .join('');
-  el.select.addEventListener('change', () => {
-    loadTrack(el.select.value);
-    const url = new URL(location.href);
-    url.searchParams.set('track', el.select.value);
-    url.hash = '';
-    history.replaceState(null, '', url);
+  el.select.addEventListener('change', () => selectTrack(el.select.value));
+  renderQueue();
+}
+
+/* Lista de canciones: la UI real. El <select> quedó oculto, así que esta lista
+ * es la que se maneja con ratón y teclado (son botones nativos). */
+function renderQueue() {
+  if (!el.trackList) return;
+  el.queueCount.textContent = state.tracks.length === 1
+    ? '1 canción'
+    : `${state.tracks.length} canciones`;
+
+  el.trackList.innerHTML = state.tracks.map((t, i) => {
+    const artist = t.artist || '';
+    return `
+      <li class="queue-item" data-id="${escapeHtml(t.id)}">
+        <button class="queue-btn" type="button" data-id="${escapeHtml(t.id)}"
+                aria-current="false" title="${escapeHtml(t.title)} — ${escapeHtml(artist)}">
+          <span class="queue-index" aria-hidden="true">
+            <span class="num">${String(i + 1).padStart(2, '0')}</span>
+            <span class="eq"><i></i><i></i><i></i></span>
+          </span>
+          <span class="queue-body">
+            <span class="queue-name">${escapeHtml(t.title)}</span>
+            <span class="queue-artist">${escapeHtml(artist)}</span>
+          </span>
+          <span class="queue-time">${fmtTime(t.duration || 0)}</span>
+        </button>
+      </li>`;
+  }).join('');
+
+  el.trackList.addEventListener('click', (ev) => {
+    const btn = ev.target.closest('.queue-btn');
+    if (btn) selectTrack(btn.dataset.id);
   });
+
+  loadQueueDurations();
+}
+
+/* La duración vive en el JSON de cada pista, no en el índice: se cargan en
+ * paralelo y sin bloquear el reproductor. Si una falla, se queda en 0:00. */
+async function loadQueueDurations() {
+  await Promise.all(state.tracks.map(async (t) => {
+    if (t.duration) { setQueueDuration(t.id, t.duration); return; }
+    try {
+      const res = await fetch(t.file, { cache: 'force-cache' });
+      if (!res.ok) return;
+      const track = await res.json();
+      if (track.duration) setQueueDuration(t.id, track.duration);
+    } catch { /* la lista nunca debe romper la página */ }
+  }));
+}
+
+function selectTrack(id) {
+  loadTrack(id);
+  const url = new URL(location.href);
+  url.searchParams.set('track', id);
+  url.hash = '';
+  history.replaceState(null, '', url);
+}
+
+/* Marca en la lista la canción que está sonando. */
+function markQueueActive(id) {
+  if (!el.trackList) return;
+  for (const item of el.trackList.querySelectorAll('.queue-item')) {
+    const on = item.dataset.id === id;
+    item.classList.toggle('is-active', on);
+    item.querySelector('.queue-btn')?.setAttribute('aria-current', on ? 'true' : 'false');
+  }
+}
+
+function setQueueDuration(id, seconds) {
+  const slot = el.trackList?.querySelector(`.queue-item[data-id="${id}"] .queue-time`);
+  if (slot && seconds) slot.textContent = fmtTime(seconds);
 }
 
 function escapeHtml(str) {
@@ -213,6 +282,9 @@ async function loadTrack(id) {
     .split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
   el.statBpm.textContent = track.bpm ? `${track.bpm} BPM` : '—';
   el.select.value = track.id;
+  markQueueActive(track.id);
+  // la duración real vive en el JSON de la pista, no en el índice
+  if (track.duration) setQueueDuration(track.id, track.duration);
   document.title = `${title} — Lyric Rapper`;
 
   // audio: Opus (webm) primero; si el navegador no lo traga, cae al mp3

@@ -112,22 +112,168 @@ svg { display: block; }
 
 .track-switch { flex: 1; min-width: 0; display: flex; justify-content: center; }
 
-.track-select {
-  width: min(100%, 420px);
-  appearance: none;
-  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239b9baa' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--text);
-  font: inherit;
-  font-size: .92rem;
-  padding: 9px 38px 9px 16px;
-  cursor: pointer;
-  transition: border-color .18s, background-color .18s;
-}
-.track-select:hover { border-color: var(--line-strong); }
+.track-switch { flex: 1; min-width: 0; display: flex; justify-content: center; }
 
-.topbar-actions { display: flex; align-items: center; gap: 6px; flex: none; }
+/* Select nativo: queda como respaldo accesible (oculto visualmente) */
+.track-select {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.topbar-actions { display: flex; align-items: center; gap: 6px; flex: none; margin-left: auto; }
+
+/* --------------------------------------------------------------- playlist */
+
+.queue {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--surface), var(--bg-soft));
+  overflow: hidden;
+}
+
+.queue-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.queue-title {
+  margin: 0;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.queue-count {
+  font-size: .68rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-2);
+}
+
+.queue-list {
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  display: grid;
+  gap: 2px;
+  max-height: min(30vh, 250px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+.queue-list::-webkit-scrollbar { width: 8px; }
+.queue-list::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 99px;
+}
+
+.queue-item { margin: 0; }
+
+.queue-btn {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color .16s, color .16s;
+}
+.queue-btn:hover { background: rgba(255, 255, 255, .05); }
+.queue-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* número / icono de reproducción */
+.queue-index {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  font-size: .72rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-2);
+}
+.queue-index svg { width: 12px; height: 12px; }
+
+.queue-body { min-width: 0; display: grid; gap: 1px; }
+.queue-name {
+  font-size: .88rem;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.queue-artist {
+  font-size: .74rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.queue-time {
+  font-size: .72rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-2);
+  padding-left: 4px;
+}
+
+/* pista sonando */
+.queue-item.is-active .queue-btn {
+  background: var(--accent-tint);
+  box-shadow: inset 2px 0 0 var(--accent);
+}
+.queue-item.is-active .queue-name { color: #fff; }
+.queue-item.is-active .queue-index { color: var(--accent); }
+.queue-item.is-active .queue-time { color: var(--accent-2); }
+
+/* ecualizador animado en la pista activa */
+.queue-item.is-active .queue-index .eq { display: flex; }
+.queue-item.is-active .queue-index .num { display: none; }
+.eq {
+  display: none;
+  align-items: flex-end;
+  gap: 2px;
+  height: 12px;
+}
+.eq i {
+  display: block;
+  width: 2px;
+  border-radius: 1px;
+  background: var(--accent);
+  animation: eq 1s ease-in-out infinite;
+}
+.eq i:nth-child(1) { height: 55%; animation-delay: -.2s; }
+.eq i:nth-child(2) { height: 100%; animation-delay: -.55s; }
+.eq i:nth-child(3) { height: 70%; animation-delay: -.35s; }
+@keyframes eq {
+  0%, 100% { transform: scaleY(.35); }
+  50%      { transform: scaleY(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .eq i { animation: none; }
+}
+
 
 /* ---------------------------------------------------------------- buttons */
 
@@ -225,11 +371,15 @@ svg { display: block; }
   align-items: start;
 }
 
+/* La columna izquierda (portada + stats + búsqueda + playlist) puede ser más
+ * alta que la letra: el layout reserva la altura del transporte fijo para que
+ * la playlist no quede debajo. */
 .now {
   position: sticky;
   top: 86px;
   display: grid;
   gap: 18px;
+  padding-bottom: calc(var(--transport-h) + 16px);
 }
 
 /* portada */
@@ -755,6 +905,11 @@ kbd {
   .controls { gap: 6px; }
   .cover { width: 84px; }
   .now { grid-template-columns: 84px minmax(0, 1fr); }
+  /* en móvil la portada ocupa la 1ª columna, pero la playlist necesita todo el
+     ancho: sin esto se encoge a 84px */
+  .queue,
+  .now-actions,
+  .search { grid-column: 1 / -1; }
   .now-stats .stat:nth-child(3) { display: none; }
   .now-stats { grid-template-columns: repeat(2, 1fr); }
 }

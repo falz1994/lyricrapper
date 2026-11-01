@@ -22,6 +22,9 @@
       <span class="brand-text">Lyric<b>Rapper</b></span>
     </a>
 
+    <!-- Espejo accesible de la playlist: la UI real son los botones de
+         .queue-list, esto mantiene el estado de la canción para lectores de
+         pantalla y por si se quiere volver a un select visible. -->
     <div class="track-switch">
       <label class="sr-only" for="track-select">Elegir canción</label>
       <select id="track-select" class="track-select"></select>
@@ -98,6 +101,14 @@
           <span>Compartir</span>
         </button>
       </div>
+
+      <section class="queue" aria-label="Lista de canciones">
+        <div class="queue-head">
+          <h2 class="queue-title">Playlist</h2>
+          <span class="queue-count" id="queue-count"></span>
+        </div>
+        <ol class="queue-list" id="track-list"></ol>
+      </section>
     </aside>
 
     <section class="lyrics-panel" aria-label="Letra">

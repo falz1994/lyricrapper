@@ -1,12 +1,6 @@
 {
   "tracks": [
     {
-      "id": "demo-beat",
-      "title": "Demo Beat",
-      "artist": "Lyric Rapper",
-      "file": "data/tracks/demo-beat.json"
-    },
-    {
       "id": "ny-state-of-mind",
       "title": "N.Y. State of Mind",
       "artist": "Nas",
