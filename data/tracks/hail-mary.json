@@ -4,7 +4,7 @@
   "artist": "Makaveli",
   "album": "The Don Killuminati: The 7 Day Theory",
   "kicker": "Alineado con Google Speech-to-Text",
-  "audio": "https://scrapper-vps2.tail1b3c33.ts.net/audio/webm/hailmar.webm",
+  "audio": "assets/audio/hailmar.webm",
   "duration": 309.986,
   "bpm": null,
   "language": "en",
@@ -755,5 +755,5 @@
       "text": "Killuminati, The 7 Days"
     }
   ],
-  "audioFallback": "https://scrapper-vps2.tail1b3c33.ts.net/audio/mp3/hailmar.mp3"
+  "audioFallback": "assets/audio/hailmar.mp3"
 }

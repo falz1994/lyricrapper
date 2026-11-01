@@ -4,7 +4,7 @@
   "artist": "Wu-Tang Clan",
   "album": "Enter the Wu-Tang (36 Chambers)",
   "kicker": "Alineado con Google Speech-to-Text",
-  "audio": "https://scrapper-vps2.tail1b3c33.ts.net/audio/webm/cream.webm",
+  "audio": "assets/audio/cream.webm",
   "duration": 242.207,
   "bpm": null,
   "language": "en",
@@ -490,5 +490,5 @@
       "text": "Dollar, dollar bill, y'all-all-all, yeah"
     }
   ],
-  "audioFallback": "https://scrapper-vps2.tail1b3c33.ts.net/audio/mp3/cream.mp3"
+  "audioFallback": "assets/audio/cream.mp3"
 }

@@ -4,7 +4,7 @@
   "artist": "Wu-Tang Clan",
   "album": "",
   "kicker": "Alineado automáticamente (small)",
-  "audio": "https://scrapper-vps2.tail1b3c33.ts.net/audio/webm/prot.webm",
+  "audio": "assets/audio/prot.webm",
   "duration": 292.779,
   "bpm": null,
   "language": "en",
@@ -640,5 +640,5 @@
       "text": "You best protect ya neck"
     }
   ],
-  "audioFallback": "https://scrapper-vps2.tail1b3c33.ts.net/audio/mp3/prot.mp3"
+  "audioFallback": "assets/audio/prot.mp3"
 }

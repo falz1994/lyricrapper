@@ -4,7 +4,7 @@
   "artist": "Mobb Deep",
   "album": "",
   "kicker": "Alineado automáticamente (small)",
-  "audio": "https://scrapper-vps2.tail1b3c33.ts.net/audio/webm/surv.webm",
+  "audio": "assets/audio/surv.webm",
   "duration": 226.07,
   "bpm": null,
   "language": "en",
@@ -470,5 +470,5 @@
       "text": "Mobb Deep and all that"
     }
   ],
-  "audioFallback": "https://scrapper-vps2.tail1b3c33.ts.net/audio/mp3/surv.mp3"
+  "audioFallback": "assets/audio/surv.mp3"
 }

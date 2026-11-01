@@ -5,18 +5,13 @@ tools/models/
 # capturas y perfiles de Chrome de las pruebas
 .tmp/
 
-# audios y letras de terceros: no se versionan
-assets/audio/*.mp3
+# audios: los webm/mp3 de assets/audio/ SÍ se versionan (los sirve Vercel en
+# el mismo origen que el reproductor: HTTPS y CORS resueltos sin host externo).
+# El resto de formatos no se versiona.
 assets/audio/*.m4a
 assets/audio/*.wav
 assets/audio/*.flac
 assets/audio/*.ogg
-assets/audio/*.webm
-!assets/audio/demo-beat.mp3
-!assets/audio/demo-beat.webm
-# instrumental propia de N.Y. State of Mind
-!assets/audio/nasny.mp3
-!assets/audio/nasny.webm
 
 # copias de trabajo en la raíz del proyecto (fuente y letras de las canciones)
 /*.mp3

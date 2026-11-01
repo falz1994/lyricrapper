@@ -4,7 +4,7 @@
   "artist": "Nas",
   "album": "Illmatic",
   "kicker": "Alineado automáticamente (small)",
-  "audio": "https://scrapper-vps2.tail1b3c33.ts.net/audio/webm/nasny.webm",
+  "audio": "assets/audio/nasny.webm",
   "duration": 295.59,
   "bpm": null,
   "language": "en",
@@ -455,5 +455,5 @@
       "text": "New York state of mind"
     }
   ],
-  "audioFallback": "https://scrapper-vps2.tail1b3c33.ts.net/audio/mp3/nasny.mp3"
+  "audioFallback": "assets/audio/nasny.mp3"
 }

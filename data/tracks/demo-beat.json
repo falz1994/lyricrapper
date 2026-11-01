@@ -4,7 +4,7 @@
   "artist": "Lyric Rapper",
   "album": "Piloto",
   "kicker": "Demostración",
-  "audio": "https://scrapper-vps2.tail1b3c33.ts.net/audio/webm/demo-beat.webm",
+  "audio": "assets/audio/demo-beat.webm",
   "duration": 44.667,
   "bpm": 90,
   "language": "es",
@@ -51,5 +51,5 @@
       "text": "y la letra y la música van a la vez"
     }
   ],
-  "audioFallback": "https://scrapper-vps2.tail1b3c33.ts.net/audio/mp3/demo-beat.mp3"
+  "audioFallback": "assets/audio/demo-beat.mp3"
 }
