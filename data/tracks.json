@@ -41,6 +41,12 @@
       "title": "Mass Appeal",
       "artist": "Gang Starr",
       "file": "data/tracks/mass-appeal.json"
+    },
+    {
+      "id": "ruff-ryders-anthem",
+      "title": "Ruff Ryders' Anthem",
+      "artist": "DMX",
+      "file": "data/tracks/ruff-ryders-anthem.json"
     }
   ]
 }
