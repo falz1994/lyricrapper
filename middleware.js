@@ -4,11 +4,11 @@
  * reproductor y las letras. Lo que NO se abre, y sigue devolviendo 404:
  *
  *   · sync.html   estudio de sincronización (escribe en el proyecto)
- *   · stats.html  panel de analítica
- *   · /api/stats  resumen de eventos (lectura)
  *
- * /api/event SÍ es público: lo llama assets/js/analytics.js desde cada visita.
- * Cerrarlo solo llenaba la consola de 404 y dejaba el sitio sin métricas.
+ * stats.html y /api/stats son públicos por decisión del usuario (31-oct):
+ * quiere ver la analítica desde el sitio en producción.
+ *
+ * /api/event también es público: lo llama assets/js/analytics.js en cada visita.
  *
  * Historia: hasta hoy este archivo era una puerta por URL-capacidad
  * (`?k=ACCESS_KEY` + cookie `lr_access`). Se retiró al abrirlo al público; el
@@ -20,8 +20,6 @@
 
 const BLOCKED = [
   /^\/sync\.html$/,
-  /^\/stats\.html$/,
-  /^\/api\/stats$/,
 ];
 
 function notFound() {

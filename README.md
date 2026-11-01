@@ -216,9 +216,10 @@ privadas; el resto pasa sin más:
 | Ruta | Acceso |
 |---|---|
 | `index.html`, `letras.html`, `assets/`, `data/` | **público** |
+| `stats.html` (panel de analítica) | **público** |
+| `/api/stats` (resumen de eventos) | **público** |
+| `/api/event` (escritura de eventos) | **público** (lo llama analítica.js) |
 | `sync.html` (estudio, escribe en el proyecto) | 404 |
-| `stats.html` (panel de analítica) | 404 |
-| `/api/*` (escritura de eventos, resumen) | 404 |
 
 - `robots.txt` y la cabecera `X-Robots-Tag: noindex, nofollow` (en `vercel.json`)
   lo mantienen fuera de los buscadores aunque sea público.
@@ -289,7 +290,7 @@ Para medir algo propio desde la consola del navegador:
 ```
 index.html                 reproductor
 sync.html                  estudio para marcar los tiempos
-middleware.js              cierra sync.html, stats.html y /api/ en el edge de Vercel
+middleware.js              cierra sync.html en el edge de Vercel
 assets/css/styles.css      estilos del reproductor (y base del estudio)
 assets/css/sync.css        estilos propios del estudio
 assets/js/app.js           lógica del reproductor
