@@ -5,7 +5,10 @@
  *
  *   · sync.html   estudio de sincronización (escribe en el proyecto)
  *   · stats.html  panel de analítica
- *   · /api/*      endpoints de escritura y lectura de eventos
+ *   · /api/stats  resumen de eventos (lectura)
+ *
+ * /api/event SÍ es público: lo llama assets/js/analytics.js desde cada visita.
+ * Cerrarlo solo llenaba la consola de 404 y dejaba el sitio sin métricas.
  *
  * Historia: hasta hoy este archivo era una puerta por URL-capacidad
  * (`?k=ACCESS_KEY` + cookie `lr_access`). Se retiró al abrirlo al público; el
@@ -18,7 +21,7 @@
 const BLOCKED = [
   /^\/sync\.html$/,
   /^\/stats\.html$/,
-  /^\/api\//,
+  /^\/api\/stats$/,
 ];
 
 function notFound() {
