@@ -23,6 +23,18 @@
       "title": "Hail Mary",
       "artist": "Makaveli",
       "file": "data/tracks/hail-mary.json"
+    },
+    {
+      "id": "survival-of-the-fit",
+      "title": "Survival of the Fit",
+      "artist": "Mobb Deep",
+      "file": "data/tracks/survival-of-the-fit.json"
+    },
+    {
+      "id": "protect-ya-neck",
+      "title": "Protect Ya Neck",
+      "artist": "Wu-Tang Clan",
+      "file": "data/tracks/protect-ya-neck.json"
     }
   ]
 }

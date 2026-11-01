@@ -4,16 +4,24 @@
 # audios y letras de terceros
 # (assets/audio/nasny.* se publica a propósito: es la instrumental propia
 #  de N.Y. State of Mind; aquí sólo se excluye la copia suelta de la raíz)
+#
+# Desde el 31-oct los audios de TODAS las pistas se sirven desde el VPS
+# (scrapper-vps2, /var/www/audio) y los data/tracks/*.json llevan URLs
+# absolutas: aquí se excluye toda la carpeta para que Vercel no publique
+# ninguna grabación. Excepción: nasny.* sigue subiendo (instrumental propia).
 1.mp3
-assets/audio/cream.mp3
-assets/audio/cream.webm
-assets/audio/hailmar.mp3
-assets/audio/hailmar.webm
+assets/audio/*
+!assets/audio/nasny.mp3
+!assets/audio/nasny.webm
 cream.mp3
 hailmar.mp3
+surv.mp3
+prot.mp3
 letra-cream.txt
 letra-hailmar.txt
 letra-ny.txt
+letra-surv.txt
+letra-prot.txt
 
 # dependencias locales y temporales
 tools/pylib/
