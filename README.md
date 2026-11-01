@@ -202,35 +202,34 @@ Y queda en el selector del reproductor.
 
 ---
 
-## Publicarlo: URL privada y analítica
+## Publicarlo: sitio público y analítica
 
-El despliegue es estático (Vercel). Dos piezas lo convierten en algo privado y
-medible, sin cuentas de terceros ni cookies de seguimiento.
+El despliegue es estático (Vercel). El sitio es **público** desde el 31-oct: quien
+tenga la URL ve el reproductor y las letras. Lo que no se abre son las
+herramientas internas.
 
-### Sólo entra quien tiene la URL
+### Qué está abierto y qué no
 
-`middleware.js` corre en el edge de Vercel y **devuelve 404 a todo** salvo que la
-petición traiga la clave. La clave no está en el repo (es público): se configura
-como variable de entorno.
+`middleware.js` corre en el edge de Vercel y sólo devuelve 404 a las rutas
+privadas; el resto pasa sin más:
 
-1. En Vercel → *Settings* → *Environment Variables*: `ACCESS_KEY` = una cadena
-   larga y aleatoria (`openssl rand -hex 24`).
-2. Redeploy.
-3. Entra una vez con `https://<sitio>/?k=<ACCESS_KEY>`: el middleware deja una
-   cookie `lr_access` de un año y redirige a la URL limpia (la clave no queda en
-   la barra de direcciones). A partir de ahí, todo normal.
+| Ruta | Acceso |
+|---|---|
+| `index.html`, `letras.html`, `assets/`, `data/` | **público** |
+| `sync.html` (estudio, escribe en el proyecto) | 404 |
+| `stats.html` (panel de analítica) | 404 |
+| `/api/*` (escritura de eventos, resumen) | 404 |
 
-Detalles a propósito:
-
-- **Falla cerrado**: si `ACCESS_KEY` no está definida, el sitio devuelve 404. No
-  hay forma de dejarlo abierto por olvido.
-- Los intentos con `?k=` incorrecta también dan 404, no 401: no confirman que el
-  sitio exista.
 - `robots.txt` y la cabecera `X-Robots-Tag: noindex, nofollow` (en `vercel.json`)
-  lo mantienen fuera de los buscadores.
+  lo mantienen fuera de los buscadores aunque sea público.
+- En local no hay middleware: `tools/server.py` sirve todo, que es lo cómodo para
+  trabajar.
 
-En local no hay puerta: `tools/server.py` sirve sin clave, que es lo cómodo para
-trabajar.
+> **Historia.** Antes de abrirlo, el sitio era privado por URL-capacidad: había que
+> entrar con `?k=ACCESS_KEY` y se dejaba una cookie `lr_access` de un año (fallaba
+> cerrado si `ACCESS_KEY` no estaba definida). Ese código está en el historial de
+> git; la variable `ACCESS_KEY` en Vercel ya no la usa nadie y se puede borrar.
+> Para volver a cerrarlo, restaura ese `middleware.js` y define `ACCESS_KEY`.
 
 ### Dónde viven los audios
 
@@ -290,7 +289,7 @@ Para medir algo propio desde la consola del navegador:
 ```
 index.html                 reproductor
 sync.html                  estudio para marcar los tiempos
-middleware.js              puerta de acceso (URL con clave) en el edge de Vercel
+middleware.js              cierra sync.html, stats.html y /api/ en el edge de Vercel
 assets/css/styles.css      estilos del reproductor (y base del estudio)
 assets/css/sync.css        estilos propios del estudio
 assets/js/app.js           lógica del reproductor
