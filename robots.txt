@@ -1,3 +1,4 @@
-# Sitio privado: no se indexa ni se enlaza desde ningún sitio.
+# Sitio público por URL, pero fuera de los buscadores a propósito.
+# Se refuerza con X-Robots-Tag: noindex, nofollow (vercel.json).
 User-agent: *
 Disallow: /
