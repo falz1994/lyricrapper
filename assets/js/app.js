@@ -20,6 +20,10 @@ const el = {
   select: $('#track-select'),
   trackList: $('#track-list'),
   queueCount: $('#queue-count'),
+  trackMenu: $('#track-menu'),
+  picker: $('#btn-picker'),
+  pickerName: $('#picker-name'),
+  pickerArtist: $('#picker-artist'),
   banner: $('#banner'),
   bannerTitle: $('#banner-title'),
   bannerText: $('#banner-text'),
@@ -194,9 +198,12 @@ function renderQueue() {
 
   el.trackList.addEventListener('click', (ev) => {
     const btn = ev.target.closest('.queue-btn');
-    if (btn) selectTrack(btn.dataset.id);
+    if (!btn) return;
+    selectTrack(btn.dataset.id);
+    closePicker(true);
   });
 
+  bindPicker();
   loadQueueDurations();
 }
 
@@ -220,6 +227,41 @@ function selectTrack(id) {
   url.searchParams.set('track', id);
   url.hash = '';
   history.replaceState(null, '', url);
+}
+
+/* ---------------------------------------------------------- selector de canción */
+
+function bindPicker() {
+  if (!el.picker || !el.trackMenu) return;
+  el.picker.addEventListener('click', (ev) => {
+    ev.stopPropagation();
+    togglePicker();
+  });
+
+  // cerrar al hacer clic fuera o con Escape
+  document.addEventListener('click', (ev) => {
+    if (el.trackMenu.hidden) return;
+    if (!el.trackMenu.contains(ev.target) && !el.picker.contains(ev.target)) closePicker();
+  });
+  document.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Escape' && !el.trackMenu.hidden) { closePicker(true); }
+  });
+}
+
+function togglePicker() {
+  if (el.trackMenu.hidden) openPicker(); else closePicker();
+}
+
+function openPicker() {
+  el.trackMenu.hidden = false;
+  el.picker.setAttribute('aria-expanded', 'true');
+}
+
+function closePicker(focusBack = false) {
+  if (!el.trackMenu) return;
+  el.trackMenu.hidden = true;
+  el.picker?.setAttribute('aria-expanded', 'false');
+  if (focusBack) el.picker?.focus();
 }
 
 /* Marca en la lista la canción que está sonando. */
@@ -282,6 +324,9 @@ async function loadTrack(id) {
     .split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
   el.statBpm.textContent = track.bpm ? `${track.bpm} BPM` : '—';
   el.select.value = track.id;
+  if (el.pickerName) el.pickerName.textContent = title;
+  if (el.pickerArtist) el.pickerArtist.textContent = artist;
+  el.picker?.setAttribute('title', `${title} — ${artist}`);
   markQueueActive(track.id);
   // la duración real vive en el JSON de la pista, no en el índice
   if (track.duration) setQueueDuration(track.id, track.duration);
