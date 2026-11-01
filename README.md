@@ -232,6 +232,37 @@ Detalles a propósito:
 En local no hay puerta: `tools/server.py` sirve sin clave, que es lo cómodo para
 trabajar.
 
+### Dónde viven los audios
+
+El repo no versiona las grabaciones de terceros, así que en Vercel los
+`data/tracks/*.json` llevan URLs absolutas a un host externo. Desde el 31-oct ese
+host es el VPS del scraper (`scrapper-vps2`):
+
+| Ruta en el VPS | URL pública |
+|---|---|
+| `/var/www/audio/webm/` (Opus 64k, el que usa el reproductor) | `https://scrapper-vps2.tail1b3c33.ts.net/audio/webm/` |
+| `/var/www/audio/mp3/` (respaldo `audioFallback`) | `https://scrapper-vps2.tail1b3c33.ts.net/audio/mp3/` |
+
+Sirven dos capas, las dos con `Access-Control-Allow-Origin: *` y `Range`
+(sin esto el reproductor no puede saltar entre versos desde otro origen):
+
+- **Tailscale Funnel** (HTTPS, público): `tailscale funnel status` lista la ruta
+  `/audio/` apuntando al directorio `/var/www/audio`. No se puede mover a otro
+  path — el path `/` está ocupado por Guacamole.
+- **nginx** (HTTP, público, sin cifrar): `location /audio/` con `root /var/www`
+  en `/etc/nginx/sites-enabled/default`; útil en redes que bloquean Tailscale.
+
+Para cambiar de host (R2, CDN, otro VPS):
+
+```bash
+python3 tools/set_audio_host.py https://mi-host/audio/webm   # reescribe los JSON
+python3 tools/set_audio_host.py --revert                     # vuelve a rutas relativas
+```
+
+Y después `git commit` + `push`: Vercel redespliega solo. Ojo con el respaldo:
+`set_audio_host.py` deriva `audioFallback` de la misma carpeta base, así que si
+separas los mp3 hay que retocar esas URLs a mano (como se hizo con `/audio/mp3/`).
+
 ### Analítica
 
 `assets/js/analytics.js` emite cuatro eventos —`pageview`, `track_open`,
