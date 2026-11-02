@@ -2,261 +2,190 @@
   "id": "paper",
   "title": "Paper",
   "artist": "Bone Thugs-N-Harmony",
-  "album": "The Art of War",
+  "album": "",
   "kicker": "Alineado con Google Speech-to-Text",
-  "cover": "assets/covers/paper.jpg",
-  "audio": "assets/audio/paperpaper.webm",
+  "audio": "assets/audio/paperpaper.mp3",
   "duration": 312.657,
   "bpm": null,
   "language": "en",
   "lines": [
     {
-      "start": 2.0,
-      "end": 7.089,
+      "start": 2.5,
+      "end": 8.667,
       "text": "Where the fiends at?"
     },
     {
-      "start": 7.089,
-      "end": 13.667,
-      "text": "Bone thugs"
-    },
-    {
-      "start": 13.667,
-      "end": 16.956,
-      "text": "Harmony"
-    },
-    {
-      "start": 16.956,
-      "end": 40.3,
+      "start": 8.7,
+      "end": 18.89,
       "text": "Money ain't a thing, I'ma get me some"
     },
     {
-      "start": 40.3,
-      "end": 40.3,
+      "start": 18.97,
+      "end": 29.17,
       "text": "My nigga I'ma get me some"
     },
     {
-      "start": 40.3,
-      "end": 42.014,
+      "start": 29.25,
+      "end": 39.44,
       "text": "Say my nigga y'all, better get your paper"
     },
     {
-      "start": 42.014,
-      "end": 43.085,
+      "start": 39.52,
+      "end": 49.72,
       "text": "Paper, paper, paper, paper, paper"
     },
     {
-      "start": 43.085,
-      "end": 44.799,
-      "text": "Money ain't a thing, I'ma get me some"
-    },
-    {
-      "start": 44.799,
-      "end": 46.085,
-      "text": "My nigga I'ma get me some"
-    },
-    {
-      "start": 46.085,
-      "end": 47.799,
-      "text": "Say my nigga y'all, better get your paper"
-    },
-    {
-      "start": 47.799,
-      "end": 48.87,
-      "text": "Paper, paper, paper, paper, paper"
-    },
-    {
-      "start": 48.87,
-      "end": 50.584,
-      "text": "Money ain't a thing, I'ma get me some"
-    },
-    {
-      "start": 50.584,
-      "end": 51.87,
-      "text": "My nigga I'ma get me some"
-    },
-    {
-      "start": 51.87,
-      "end": 53.584,
-      "text": "Say my nigga y'all, better get your paper"
-    },
-    {
-      "start": 53.584,
-      "end": 54.655,
-      "text": "Paper, paper, paper, paper, paper"
-    },
-    {
-      "start": 54.655,
-      "end": 56.369,
-      "text": "Money ain't a thing, I'ma get me some"
-    },
-    {
-      "start": 56.369,
-      "end": 57.655,
-      "text": "My nigga I'ma get me some"
-    },
-    {
-      "start": 57.655,
-      "end": 59.369,
-      "text": "Say my nigga y'all, better get your paper"
-    },
-    {
-      "start": 59.369,
-      "end": 60.44,
-      "text": "Paper, paper, paper, paper, paper"
-    },
-    {
-      "start": 60.44,
-      "end": 61.297,
+      "start": 49.764,
+      "end": 52.676,
       "text": "Money ain't a thang"
     },
     {
-      "start": 61.297,
-      "end": 62.154,
+      "start": 52.676,
+      "end": 55.587,
       "text": "My my baby's banging"
     },
     {
-      "start": 62.154,
-      "end": 62.797,
+      "start": 55.587,
+      "end": 58.55,
       "text": "Beefing with me"
     },
     {
-      "start": 62.797,
-      "end": 63.654,
+      "start": 58.55,
+      "end": 60.809,
       "text": "Squashed it ordained it"
     },
     {
-      "start": 63.654,
-      "end": 64.725,
+      "start": 60.809,
+      "end": 61.855,
       "text": "Better yet sustained the flurry"
     },
     {
-      "start": 64.725,
-      "end": 65.583,
+      "start": 61.855,
+      "end": 62.691,
       "text": "Hide in the fury"
     },
     {
-      "start": 65.583,
-      "end": 66.868,
+      "start": 62.691,
+      "end": 62.691,
       "text": "But the ways of a broad"
     },
     {
-      "start": 66.868,
-      "end": 68.582,
+      "start": 62.691,
+      "end": 67.279,
       "text": "Don't mean you've died out of my life"
     },
     {
-      "start": 68.582,
-      "end": 69.653,
+      "start": 67.279,
+      "end": 70.146,
       "text": "I'm hurt, burn me baby"
     },
     {
-      "start": 69.653,
-      "end": 70.082,
+      "start": 70.146,
+      "end": 71.293,
       "text": "Tie down"
     },
     {
-      "start": 70.082,
-      "end": 70.939,
+      "start": 71.293,
+      "end": 73.588,
       "text": "And child hood scars"
     },
     {
-      "start": 70.939,
-      "end": 70.939,
+      "start": 73.588,
+      "end": 73.588,
       "text": "Crackhead cause niggas I don't know"
     },
     {
-      "start": 70.939,
-      "end": 72.604,
+      "start": 73.588,
+      "end": 75.114,
       "text": "That who'd ya think you are"
     },
     {
-      "start": 72.604,
-      "end": 75.378,
+      "start": 75.114,
+      "end": 77.658,
       "text": "And here we are, steady we roll out over you"
     },
     {
-      "start": 75.378,
-      "end": 76.766,
+      "start": 77.658,
+      "end": 78.93,
       "text": "When it's over it's over"
     },
     {
-      "start": 76.766,
-      "end": 78.708,
+      "start": 78.93,
+      "end": 80.711,
       "text": "For the soldiers who hear me, that'll"
     },
     {
-      "start": 78.708,
-      "end": 79.818,
+      "start": 80.711,
+      "end": 81.729,
       "text": "Get me in trouble"
     },
     {
-      "start": 79.818,
-      "end": 82.037,
+      "start": 81.729,
+      "end": 83.764,
       "text": "Can I be closer, stay right near me"
     },
     {
-      "start": 82.037,
-      "end": 84.257,
+      "start": 83.764,
+      "end": 85.799,
       "text": "Here we are, ain't no stars, uh huh"
     },
     {
-      "start": 84.257,
-      "end": 86.477,
+      "start": 85.799,
+      "end": 87.834,
       "text": "Can I get drunk off in some bar"
     },
     {
-      "start": 86.477,
-      "end": 87.586,
+      "start": 87.834,
+      "end": 88.852,
       "text": "Without some haters sayin"
     },
     {
-      "start": 87.586,
-      "end": 89.251,
+      "start": 88.852,
+      "end": 90.379,
       "text": "\"Who do you think you are?!\""
     },
     {
-      "start": 89.251,
-      "end": 92.026,
+      "start": 90.379,
+      "end": 92.923,
       "text": "When I'm sober, start jumping in it to win it"
     },
     {
-      "start": 92.026,
-      "end": 94.245,
+      "start": 92.923,
+      "end": 94.958,
       "text": "Shit I bet they thought we fell off"
     },
     {
-      "start": 94.245,
-      "end": 95.633,
+      "start": 94.958,
+      "end": 96.23,
       "text": "Bone thugs-n-harmony resurrection"
     },
     {
-      "start": 95.633,
+      "start": 96.23,
       "end": 97.3,
       "text": "Krayzie, layzie, bizzy, wish"
     },
     {
       "start": 97.3,
-      "end": 98.2,
+      "end": 97.3,
       "text": "We in the flesh"
     },
     {
-      "start": 98.2,
-      "end": 99.427,
+      "start": 97.3,
+      "end": 97.3,
       "text": "Remember them thuggish ruggish niggas"
     },
     {
-      "start": 99.427,
+      "start": 97.3,
       "end": 100.7,
       "text": "Gotta get down for my thing in here"
     },
     {
       "start": 100.7,
-      "end": 102.75,
+      "end": 102.8,
       "text": "You already know when we came in here we raw"
     },
     {
-      "start": 102.75,
+      "start": 102.8,
       "end": 104.1,
       "text": "Fuck what you heard and you read about us"
     },
@@ -272,131 +201,131 @@
     },
     {
       "start": 107.05,
-      "end": 108.2,
+      "end": 108.0,
       "text": "When you niggas get serious, let a nigga know"
     },
     {
-      "start": 108.2,
-      "end": 109.467,
+      "start": 108.0,
+      "end": 109.0,
       "text": "Maybe then we can roll"
     },
     {
-      "start": 109.467,
+      "start": 109.0,
       "end": 110.2,
       "text": "Nigga bad to the bone"
     },
     {
       "start": 110.2,
-      "end": 111.333,
+      "end": 111.3,
       "text": "But I sure don't click with hoes"
     },
     {
-      "start": 111.333,
-      "end": 113.4,
+      "start": 111.3,
+      "end": 113.15,
       "text": "And no busters, haters, or hoes when"
     },
     {
-      "start": 113.4,
+      "start": 113.15,
       "end": 114.4,
       "text": "They poppin up at my door"
     },
     {
       "start": 114.4,
-      "end": 116.5,
+      "end": 116.567,
       "text": "I get excited, all uptight, and violent"
     },
     {
-      "start": 116.5,
-      "end": 116.9,
+      "start": 116.567,
+      "end": 116.567,
       "text": "Bitches was not invited!"
     },
     {
-      "start": 116.9,
-      "end": 116.9,
+      "start": 116.567,
+      "end": 118.679,
       "text": "Put 'em in a coffin before they get me man"
     },
     {
-      "start": 116.9,
-      "end": 116.9,
+      "start": 118.679,
+      "end": 119.735,
       "text": "Krayzie, loco, insane, bang bang"
     },
     {
-      "start": 116.9,
-      "end": 116.9,
+      "start": 119.735,
+      "end": 121.214,
       "text": "Running with the pump pump, no bluffing"
     },
     {
-      "start": 116.9,
-      "end": 117.459,
+      "start": 121.214,
+      "end": 121.636,
       "text": "We buck!"
     },
     {
-      "start": 117.459,
-      "end": 118.858,
+      "start": 121.636,
+      "end": 122.692,
       "text": "Nigga better realize still claim"
     },
     {
-      "start": 118.858,
-      "end": 120.537,
+      "start": 122.692,
+      "end": 123.959,
       "text": "Nineteen nine nine the nine nine"
     },
     {
-      "start": 120.537,
-      "end": 122.215,
+      "start": 123.959,
+      "end": 125.227,
       "text": "Motherfucker, fuck em to the end"
     },
     {
-      "start": 122.215,
-      "end": 123.614,
+      "start": 125.227,
+      "end": 126.283,
       "text": "And when I run out"
     },
     {
-      "start": 123.614,
-      "end": 125.572,
+      "start": 126.283,
+      "end": 127.761,
       "text": "I reloading and bucking again, some mo!"
     },
     {
-      "start": 125.572,
-      "end": 126.971,
+      "start": 127.761,
+      "end": 128.817,
       "text": "Nigga putting it down, worldwide"
     },
     {
-      "start": 126.971,
-      "end": 128.37,
+      "start": 128.817,
+      "end": 129.874,
       "text": "Them wicked bad-ass thugs"
     },
     {
-      "start": 128.37,
-      "end": 129.768,
+      "start": 129.874,
+      "end": 130.93,
       "text": "You punk niggas hate us"
     },
     {
-      "start": 129.768,
-      "end": 130.887,
+      "start": 130.93,
+      "end": 131.775,
       "text": "But we don't trip"
     },
     {
-      "start": 130.887,
-      "end": 132.566,
+      "start": 131.775,
+      "end": 133.042,
       "text": "We still get mad ass love"
     },
     {
-      "start": 132.566,
-      "end": 135.363,
+      "start": 133.042,
+      "end": 135.154,
       "text": "I show you the rapper that's sick of this song"
     },
     {
-      "start": 135.363,
-      "end": 137.042,
+      "start": 135.154,
+      "end": 136.421,
       "text": "We'll straight up toss his ass"
     },
     {
-      "start": 137.042,
-      "end": 139.0,
+      "start": 136.421,
+      "end": 137.9,
       "text": "And if he flossing cash and jewelry"
     },
     {
-      "start": 139.0,
+      "start": 137.9,
       "end": 141.4,
       "text": "Rip it off his ass"
     },
@@ -427,16 +356,16 @@
     },
     {
       "start": 141.4,
-      "end": 150.891,
+      "end": 150.818,
       "text": "Keep bucking bucking"
     },
     {
-      "start": 150.891,
-      "end": 152.25,
+      "start": 150.818,
+      "end": 152.0,
       "text": "Dumping, fucking 'em busters up with my gauge"
     },
     {
-      "start": 152.25,
+      "start": 152.0,
       "end": 153.4,
       "text": "We popping all y'all"
     },
@@ -542,11 +471,11 @@
     },
     {
       "start": 175.9,
-      "end": 177.9,
+      "end": 178.1,
       "text": "But what I'ma do is keep protecting my cheddar fool"
     },
     {
-      "start": 177.9,
+      "start": 178.1,
       "end": 179.5,
       "text": "Ain't none of y'all niggas do it better, oh"
     },
@@ -557,11 +486,11 @@
     },
     {
       "start": 181.0,
-      "end": 182.3,
+      "end": 182.4,
       "text": "Only the real thugs keeping it raw"
     },
     {
-      "start": 182.3,
+      "start": 182.4,
       "end": 183.3,
       "text": "Gripping that heat tight"
     },
@@ -572,71 +501,71 @@
     },
     {
       "start": 184.078,
-      "end": 184.078,
+      "end": 184.85,
       "text": "Nigga I'ma let it fool round and get war"
     },
     {
-      "start": 184.078,
-      "end": 184.078,
+      "start": 184.85,
+      "end": 187.0,
       "text": "Niggas is plotting that 2-11"
     },
     {
-      "start": 184.078,
-      "end": 188.4,
+      "start": 187.0,
+      "end": 188.1,
       "text": "That's why I got heat for armageddon"
     },
     {
-      "start": 188.4,
+      "start": 188.1,
       "end": 190.4,
       "text": "Picture lay on his knees and I'm begging"
     },
     {
       "start": 190.4,
-      "end": 191.8,
+      "end": 191.7,
       "text": "Nigga better shoot me and send me to heaven"
     },
     {
-      "start": 191.8,
-      "end": 191.8,
+      "start": 191.7,
+      "end": 191.7,
       "text": "Fuck all the drama, I'ma just blast"
     },
     {
-      "start": 191.8,
-      "end": 191.8,
+      "start": 191.7,
+      "end": 191.7,
       "text": "Hollow point tips off in that ass"
     },
     {
-      "start": 191.8,
-      "end": 191.8,
+      "start": 191.7,
+      "end": 191.7,
       "text": "Tha slicka the nigga"
     },
     {
-      "start": 191.8,
-      "end": 192.131,
+      "start": 191.7,
+      "end": 192.046,
       "text": "That's pulling the trigga"
     },
     {
-      "start": 192.131,
-      "end": 192.71,
+      "start": 192.046,
+      "end": 192.651,
       "text": "Is the nigga that's standing up last"
     },
     {
-      "start": 192.71,
-      "end": 192.959,
+      "start": 192.651,
+      "end": 192.91,
       "text": "Counting this cash"
     },
     {
-      "start": 192.959,
-      "end": 193.29,
+      "start": 192.91,
+      "end": 193.256,
       "text": "Still doing this mash"
     },
     {
-      "start": 193.29,
-      "end": 193.538,
+      "start": 193.256,
+      "end": 193.515,
       "text": "Blowing much weed"
     },
     {
-      "start": 193.538,
+      "start": 193.515,
       "end": 198.333,
       "text": "As we watch you bleed"
     },
@@ -647,26 +576,26 @@
     },
     {
       "start": 202.5,
-      "end": 204.225,
+      "end": 204.125,
       "text": "Now you can't do shit cause your 6 feet deep"
     },
     {
-      "start": 204.225,
-      "end": 204.9,
+      "start": 204.125,
+      "end": 204.8,
       "text": "Fucking with lay"
     },
     {
-      "start": 204.9,
+      "start": 204.8,
       "end": 205.9,
       "text": "Is a game you shouldn't play"
     },
     {
       "start": 205.9,
-      "end": 206.8,
+      "end": 206.5,
       "text": "Even myself I could die today"
     },
     {
-      "start": 206.8,
+      "start": 206.5,
       "end": 209.0,
       "text": "I could lie, but hey it ain't worth it"
     },
@@ -682,66 +611,66 @@
     },
     {
       "start": 211.2,
-      "end": 212.0,
+      "end": 212.1,
       "text": "And I'ma lace my boots"
     },
     {
-      "start": 212.0,
-      "end": 213.3,
+      "start": 212.1,
+      "end": 213.413,
       "text": "So when its time to shoot, then that's it"
     },
     {
-      "start": 213.3,
-      "end": 213.3,
+      "start": 213.413,
+      "end": 214.2,
       "text": "Screaming out mo thug in this bitch"
     },
     {
-      "start": 213.3,
-      "end": 215.8,
+      "start": 214.2,
+      "end": 214.987,
       "text": "And bone thugs in this bitch, nigga"
     },
     {
-      "start": 215.8,
-      "end": 217.65,
+      "start": 214.987,
+      "end": 217.633,
       "text": "It's all about money, yeah"
     },
     {
-      "start": 217.65,
-      "end": 218.146,
+      "start": 217.633,
+      "end": 217.633,
       "text": "I'ma get me some"
     },
     {
-      "start": 218.146,
-      "end": 218.354,
+      "start": 217.633,
+      "end": 217.633,
       "text": "Can't be fucking with niggas that ain't got none"
     },
     {
-      "start": 218.354,
-      "end": 221.4,
+      "start": 217.633,
+      "end": 217.633,
       "text": "Cause lately y'all been acting funny"
     },
     {
-      "start": 221.4,
-      "end": 223.167,
+      "start": 217.633,
+      "end": 226.0,
       "text": "I guess you smell some money"
     },
     {
-      "start": 223.167,
-      "end": 223.167,
+      "start": 226.0,
+      "end": 226.0,
       "text": "Get out my pockets"
     },
     {
-      "start": 223.167,
-      "end": 223.167,
+      "start": 226.0,
+      "end": 226.0,
       "text": "Better count your shit"
     },
     {
-      "start": 223.167,
-      "end": 226.3,
+      "start": 226.0,
+      "end": 226.0,
       "text": "It's still st clair wig-split"
     },
     {
-      "start": 226.3,
+      "start": 226.0,
       "end": 227.5,
       "text": "Four other niggas that I run with"
     },
@@ -752,36 +681,36 @@
     },
     {
       "start": 231.7,
-      "end": 233.7,
+      "end": 233.85,
       "text": "Remember back in the days when we was fucked up"
     },
     {
-      "start": 233.7,
+      "start": 233.85,
       "end": 234.9,
       "text": "But not anymore"
     },
     {
       "start": 234.9,
-      "end": 235.7,
+      "end": 237.3,
       "text": "And ain't a damn thing come easy"
     },
     {
-      "start": 235.7,
-      "end": 242.8,
+      "start": 237.3,
+      "end": 241.214,
       "text": "A lot of planning, bus rides, and eazy"
     },
     {
-      "start": 242.8,
-      "end": 242.8,
+      "start": 241.214,
+      "end": 242.243,
       "text": "For cheese"
     },
     {
-      "start": 242.8,
-      "end": 242.8,
+      "start": 242.243,
+      "end": 243.271,
       "text": "Believe me"
     },
     {
-      "start": 242.8,
+      "start": 243.271,
       "end": 244.3,
       "text": "Believe me"
     },
@@ -792,26 +721,26 @@
     },
     {
       "start": 247.3,
-      "end": 248.3,
+      "end": 248.369,
       "text": "With my bone thug love"
     },
     {
-      "start": 248.3,
-      "end": 249.1,
+      "start": 248.369,
+      "end": 249.108,
       "text": "I'ma always get mine"
     },
     {
-      "start": 249.1,
-      "end": 249.9,
+      "start": 249.108,
+      "end": 249.846,
       "text": "And I mean that"
     },
     {
-      "start": 249.9,
-      "end": 250.5,
+      "start": 249.846,
+      "end": 250.4,
       "text": "Gotta have that"
     },
     {
-      "start": 250.5,
+      "start": 250.4,
       "end": 251.2,
       "text": "Paper paper"
     },
@@ -827,204 +756,183 @@
     },
     {
       "start": 251.2,
-      "end": 253.053,
+      "end": 253.655,
       "text": "Money ain't a thing, I'ma get me some"
     },
     {
-      "start": 253.053,
-      "end": 254.443,
+      "start": 253.655,
+      "end": 255.495,
       "text": "My nigga I'ma get me some"
     },
     {
-      "start": 254.443,
-      "end": 256.296,
+      "start": 255.495,
+      "end": 257.95,
       "text": "Say my nigga y'all, better get your paper"
     },
     {
-      "start": 256.296,
-      "end": 257.454,
+      "start": 257.95,
+      "end": 259.484,
       "text": "Paper, paper, paper, paper, paper"
     },
     {
-      "start": 257.454,
-      "end": 259.307,
-      "text": "Money ain't a thing, I'ma get me some"
-    },
-    {
-      "start": 259.307,
-      "end": 260.697,
-      "text": "My nigga I'ma get me some"
-    },
-    {
-      "start": 260.697,
-      "end": 262.55,
-      "text": "Say my nigga y'all, better get your paper"
-    },
-    {
-      "start": 262.55,
-      "end": 263.708,
-      "text": "Paper, paper, paper, paper, paper"
-    },
-    {
-      "start": 263.708,
-      "end": 264.635,
+      "start": 259.484,
+      "end": 260.711,
       "text": "Money ain't a thang"
     },
     {
-      "start": 264.635,
-      "end": 266.488,
+      "start": 260.711,
+      "end": 263.166,
       "text": "You better believe we five of the last"
     },
     {
-      "start": 266.488,
-      "end": 267.646,
+      "start": 263.166,
+      "end": 264.7,
       "text": "True soldiers standing in command"
     },
     {
-      "start": 267.646,
-      "end": 269.267,
+      "start": 264.7,
+      "end": 266.848,
       "text": "You thought of me closing the book"
     },
     {
-      "start": 269.267,
-      "end": 271.12,
+      "start": 266.848,
+      "end": 269.302,
       "text": "On this bitch on y'all, flip on y'all"
     },
     {
-      "start": 271.12,
-      "end": 272.973,
+      "start": 269.302,
+      "end": 271.757,
       "text": "I am what I am the fifth dawg!"
     },
     {
-      "start": 272.973,
-      "end": 273.668,
+      "start": 271.757,
+      "end": 272.677,
       "text": "It's all good"
     },
     {
-      "start": 273.668,
-      "end": 275.058,
+      "start": 272.677,
+      "end": 274.518,
       "text": "Paper paper for the whole hood"
     },
     {
-      "start": 275.058,
-      "end": 275.058,
+      "start": 274.518,
+      "end": 274.518,
       "text": "Tell 'em I got dibs on this and kids in this"
     },
     {
-      "start": 275.058,
-      "end": 277.529,
+      "start": 274.518,
+      "end": 277.031,
       "text": "Reminiscing on my thug ass nigga eazy-e"
     },
     {
-      "start": 277.529,
-      "end": 279.999,
+      "start": 277.031,
+      "end": 279.543,
       "text": "Six deep in a six-double-o benzo"
     },
     {
-      "start": 279.999,
-      "end": 281.543,
+      "start": 279.543,
+      "end": 281.113,
       "text": "Fo the love of money"
     },
     {
-      "start": 281.543,
-      "end": 283.088,
+      "start": 281.113,
+      "end": 282.684,
       "text": "I gotta get the paper"
     },
     {
-      "start": 283.088,
-      "end": 285.558,
+      "start": 282.684,
+      "end": 285.196,
       "text": "I told y'all ain't a damn thing changed"
     },
     {
-      "start": 285.558,
-      "end": 287.103,
+      "start": 285.196,
+      "end": 286.767,
       "text": "Bout the nigga they bang"
     },
     {
-      "start": 287.103,
-      "end": 288.338,
+      "start": 286.767,
+      "end": 288.023,
       "text": "My niggas, they're down"
     },
     {
-      "start": 288.338,
-      "end": 289.882,
+      "start": 288.023,
+      "end": 289.593,
       "text": "And we'll bang your brain"
     },
     {
-      "start": 289.882,
-      "end": 291.426,
+      "start": 289.593,
+      "end": 291.164,
       "text": "Motherfucker for thinking he famous!"
     },
     {
-      "start": 291.426,
-      "end": 292.97,
+      "start": 291.164,
+      "end": 292.734,
       "text": "We in the flesh flesh"
     },
     {
-      "start": 292.97,
-      "end": 294.206,
+      "start": 292.734,
+      "end": 293.99,
       "text": "We in the flesh"
     },
     {
-      "start": 294.206,
-      "end": 295.75,
+      "start": 293.99,
+      "end": 295.561,
       "text": "We in the flesh flesh"
     },
     {
-      "start": 295.75,
-      "end": 296.985,
+      "start": 295.561,
+      "end": 296.817,
       "text": "We in the flesh"
     },
     {
-      "start": 296.985,
-      "end": 299.456,
+      "start": 296.817,
+      "end": 299.33,
       "text": "And if I can go bite the bullet"
     },
     {
-      "start": 299.456,
-      "end": 301.0,
+      "start": 299.33,
+      "end": 300.9,
       "text": "So eazy in my cadillac"
     },
     {
-      "start": 301.0,
-      "end": 301.0,
+      "start": 300.9,
+      "end": 301.583,
       "text": "Bend a couple of corners"
     },
     {
-      "start": 301.0,
-      "end": 301.029,
+      "start": 301.583,
+      "end": 302.792,
       "text": "Smoke out with some hoes"
     },
     {
-      "start": 301.029,
-      "end": 301.053,
+      "start": 302.792,
+      "end": 303.758,
       "text": "Now where y'all at?"
     },
     {
-      "start": 301.053,
-      "end": 301.071,
+      "start": 303.758,
+      "end": 304.7,
       "text": "21st century heroes"
     },
     {
-      "start": 301.071,
-      "end": 301.088,
+      "start": 304.7,
+      "end": 305.4,
       "text": "Two-triple-zero"
     },
     {
-      "start": 301.088,
-      "end": 301.1,
+      "start": 305.4,
+      "end": 306.1,
       "text": "Righteous ones"
     },
     {
-      "start": 301.1,
-      "end": 304.9,
+      "start": 306.1,
+      "end": 306.1,
       "text": "And wish the how's"
     },
     {
-      "start": 304.9,
+      "start": 306.1,
       "end": 312.657,
       "text": "Then can roll with one hundred and forty four thousand"
     }
-  ],
-  "audioFallback": "assets/audio/paperpaper.mp3"
+  ]
 }

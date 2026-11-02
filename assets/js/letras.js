@@ -114,12 +114,66 @@ function renderTrack(track, entry) {
         ${notices}
       </header>
       <ol class="letras-lines">${lines}</ol>
-      <p class="letras-copy-hint">Puedes seleccionar y copiar el texto libremente.</p>
+      <div class="letras-actions">
+        <button class="letras-btn" type="button" data-action="copy">Copiar letra</button>
+        <button class="letras-btn" type="button" data-action="lrc">Descargar .lrc</button>
+        <button class="letras-btn" type="button" data-action="json">Descargar .json</button>
+      </div>
+      <p class="letras-copy-hint">También puedes seleccionar y copiar el texto libremente.</p>
     </article>`;
 
   $('#letras-sub').textContent =
     `${esc(track.title || '')} — ${esc(track.artist || '')}`.replace(/\s+—\s+$/, '');
   document.title = `${track.title || track.id} — Letras`;
+}
+
+/* ------------------------------------------------------------- descargas */
+
+function textoPlano(track) {
+  return (track.lines || [])
+    .filter((l) => String(l.text || '').trim())
+    .sort((a, b) => a.start - b.start)
+    .map((l) => l.text.trim())
+    .join('\n');
+}
+
+function aLRC(track) {
+  const stamp = (s) => {
+    const m = Math.floor(s / 60);
+    const sec = (s % 60).toFixed(2).padStart(5, '0');
+    return `[${String(m).padStart(2, '0')}:${sec}]`;
+  };
+  const cab = [
+    `[ti:${track.title || ''}]`,
+    `[ar:${track.artist || ''}]`,
+    track.album ? `[al:${track.album}]` : null,
+  ].filter(Boolean).join('\n');
+  const cuerpo = (track.lines || [])
+    .filter((l) => typeof l.start === 'number' && String(l.text || '').trim())
+    .sort((a, b) => a.start - b.start)
+    .map((l) => `${stamp(l.start)}${l.text.trim()}`)
+    .join('\n');
+  return `${cab}\n${cuerpo}\n`;
+}
+
+function descargar(nombre, contenido, tipo) {
+  const blob = new Blob([contenido], { type: tipo });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = nombre;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function slug(texto) {
+  return String(texto || 'letra')
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '') || 'letra';
 }
 
 function renderError(msg) {
@@ -154,6 +208,45 @@ function wireSearch() {
     renderNav();
   });
 }
+
+/* Delegación: las acciones se pintan junto a cada letra, así que se escuchan
+ * en el contenedor y no en cada botón. */
+document.addEventListener('click', (ev) => {
+  const btn = ev.target.closest('.letras-btn');
+  if (!btn) return;
+  const track = state.current;
+  if (!track) return;
+  const base = slug(`${track.artist || ''}-${track.title || ''}`);
+
+  if (btn.dataset.action === 'copy') {
+    const texto = textoPlano(track);
+    const listo = () => {
+      btn.textContent = '¡Copiada!';
+      setTimeout(() => { btn.textContent = 'Copiar letra'; }, 1800);
+    };
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(texto).then(listo, () => {
+        btn.textContent = 'No se pudo copiar';
+        setTimeout(() => { btn.textContent = 'Copiar letra'; }, 1800);
+      });
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = texto;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); listo(); } catch { /* sin permiso */ }
+      ta.remove();
+    }
+  }
+
+  if (btn.dataset.action === 'lrc') {
+    descargar(`${base}.lrc`, aLRC(track), 'text/plain;charset=utf-8');
+  }
+
+  if (btn.dataset.action === 'json') {
+    descargar(`${base}.json`, JSON.stringify(track, null, 2), 'application/json');
+  }
+});
 
 (async function init() {
   wireSearch();
