@@ -2,329 +2,327 @@
   "id": "ruff-ryders-anthem",
   "title": "Ruff Ryders' Anthem",
   "artist": "DMX",
-  "album": "It's Dark and Hell Is Hot",
-  "kicker": "Alineado automáticamente (small)",
-  "cover": "assets/covers/ruff-ryders-anthem.jpg",
-  "audio": "assets/audio/ruff.webm",
+  "album": "",
+  "kicker": "Alineado con Google Speech-to-Text",
+  "audio": "assets/audio/ruff.mp3",
   "duration": 214.703,
   "bpm": null,
   "language": "en",
   "lines": [
     {
-      "start": 15.28,
-      "end": 19.94,
+      "start": 12.4,
+      "end": 18.35,
       "text": "Stop, drop, shut 'em down open up shop"
     },
     {
-      "start": 19.94,
-      "end": 21.88,
+      "start": 18.4,
+      "end": 20.75,
       "text": "Oh, no"
     },
     {
-      "start": 21.88,
-      "end": 32.372,
+      "start": 20.8,
+      "end": 23.0,
       "text": "That's how Ruff Ryders roll"
     },
     {
-      "start": 32.372,
-      "end": 37.073,
+      "start": 30.767,
+      "end": 36.95,
       "text": "Niggaz wanna try, niggaz wanna lie"
     },
     {
-      "start": 37.073,
-      "end": 39.5,
+      "start": 37.0,
+      "end": 39.25,
       "text": "Then niggaz wonder why, niggaz wanna die"
     },
     {
-      "start": 39.5,
-      "end": 40.92,
+      "start": 39.3,
+      "end": 40.65,
       "text": "All I know is pain"
     },
     {
-      "start": 40.92,
-      "end": 42.14,
+      "start": 40.7,
+      "end": 42.05,
       "text": "All I feel is rain"
     },
     {
-      "start": 42.14,
-      "end": 44.8,
+      "start": 42.1,
+      "end": 44.95,
       "text": "How can I maintain, with madd shit on my brain"
     },
     {
-      "start": 44.8,
-      "end": 47.68,
+      "start": 45.0,
+      "end": 47.45,
       "text": "I resort to violence, my niggaz move in silence"
     },
     {
-      "start": 47.68,
-      "end": 48.78,
+      "start": 47.5,
+      "end": 48.94,
       "text": "Like you don't know what are style is"
     },
     {
-      "start": 48.78,
-      "end": 50.22,
+      "start": 48.989,
+      "end": 50.05,
       "text": "New York niggaz the wildest"
     },
     {
-      "start": 50.22,
-      "end": 51.36,
+      "start": 50.1,
+      "end": 51.25,
       "text": "My niggaz is wit' it"
     },
     {
-      "start": 51.36,
-      "end": 52.967,
+      "start": 51.3,
+      "end": 53.15,
       "text": "You want it? come and get it"
     },
     {
-      "start": 52.967,
-      "end": 54.1,
+      "start": 53.2,
+      "end": 54.05,
       "text": "Took it then we split it"
     },
     {
       "start": 54.1,
-      "end": 55.36,
+      "end": 55.15,
       "text": "You fuckin' right we did it"
     },
     {
-      "start": 55.36,
-      "end": 58.38,
+      "start": 55.2,
+      "end": 58.22,
       "text": "What the fuck you gonna do, when we run up on you"
     },
     {
-      "start": 58.38,
-      "end": 60.953,
+      "start": 58.267,
+      "end": 61.0,
       "text": "Fuckin' wit' the wrong crew, don't know what we goin' thru"
     },
     {
-      "start": 60.953,
-      "end": 63.34,
+      "start": 61.05,
+      "end": 63.35,
       "text": "I'ma have ta show niggaz how easily we blow niggaz"
     },
     {
-      "start": 63.34,
-      "end": 66.187,
+      "start": 63.4,
+      "end": 66.03,
       "text": "When you find out there's somemore niggas, that's runnin with your niggaz"
     },
     {
-      "start": 66.187,
-      "end": 70.16,
+      "start": 66.075,
+      "end": 69.65,
       "text": "Nothin' we can't handle, break it up and dismantle, light it up like a candle"
     },
     {
-      "start": 70.16,
-      "end": 71.2,
+      "start": 69.7,
+      "end": 70.95,
       "text": "Just cause I can't stand you"
     },
     {
-      "start": 71.2,
-      "end": 73.88,
+      "start": 71.0,
+      "end": 73.65,
       "text": "Put my shit on tapes, like you bussin' grapes"
     },
     {
-      "start": 73.88,
-      "end": 80.956,
+      "start": 74.0,
+      "end": 75.9,
       "text": "Think you holdin weight? Then you haven't met the Apes"
     },
     {
-      "start": 80.956,
-      "end": 99.02,
+      "start": 88.0,
+      "end": 90.45,
       "text": "Is ya'll niggaz crazy?"
     },
     {
-      "start": 99.02,
-      "end": 100.12,
+      "start": 90.5,
+      "end": 93.0,
       "text": "I'll buss you and be swazy"
     },
     {
-      "start": 100.12,
-      "end": 103.13,
+      "start": 99.85,
+      "end": 102.65,
       "text": "Stop actin' like a baby, mind your business lady"
     },
     {
-      "start": 103.13,
-      "end": 105.293,
+      "start": 102.7,
+      "end": 105.55,
       "text": "Nosy people get it too, when you see me spit at you"
     },
     {
-      "start": 105.293,
-      "end": 107.087,
+      "start": 105.6,
+      "end": 106.65,
       "text": "You know I'm tryin' ta get rid of you"
     },
     {
-      "start": 107.087,
-      "end": 108.14,
+      "start": 106.7,
+      "end": 108.15,
       "text": "Ya I know it's pitiful"
     },
     {
-      "start": 108.14,
-      "end": 109.64,
+      "start": 108.2,
+      "end": 109.25,
       "text": "That's how niggaz get down"
     },
     {
-      "start": 109.64,
-      "end": 111.031,
+      "start": 109.3,
+      "end": 110.88,
       "text": "Watch why niggaz spit round"
     },
     {
-      "start": 111.031,
-      "end": 113.587,
+      "start": 110.933,
+      "end": 113.45,
       "text": "Make ya'll niggaz kiss ground, just for talkin' shit clown"
     },
     {
-      "start": 113.587,
-      "end": 116.24,
+      "start": 113.5,
+      "end": 115.65,
       "text": "Oh you think it's funny then you don't know me money"
     },
     {
-      "start": 116.24,
-      "end": 118.84,
+      "start": 115.7,
+      "end": 118.45,
       "text": "It's about to get ugly, fuck it dog I'm hungry"
     },
     {
-      "start": 118.84,
-      "end": 121.58,
+      "start": 118.5,
+      "end": 121.17,
       "text": "I guess you know what that mean, come up off that green"
     },
     {
-      "start": 121.58,
-      "end": 124.2,
+      "start": 121.217,
+      "end": 123.55,
       "text": "Five niggaz or a fiend, don't make it a murder scene"
     },
     {
-      "start": 124.2,
-      "end": 126.72,
+      "start": 123.6,
+      "end": 126.6,
       "text": "Give a dog a bone, leave a dog alone"
     },
     {
-      "start": 126.72,
-      "end": 129.5,
+      "start": 126.65,
+      "end": 128.75,
       "text": "Let a dog roam and he'll find his way home"
     },
     {
-      "start": 129.5,
-      "end": 132.04,
+      "start": 128.8,
+      "end": 131.65,
       "text": "Home of the brave, my home is a cage"
     },
     {
-      "start": 132.04,
-      "end": 133.972,
+      "start": 131.7,
+      "end": 134.15,
       "text": "And yo I'ma slave til' my home is a grave"
     },
     {
-      "start": 133.972,
-      "end": 137.04,
+      "start": 134.2,
+      "end": 137.0,
       "text": "I'ma pull paper, it's all about the papers"
     },
     {
-      "start": 137.04,
-      "end": 160.82,
+      "start": 137.1,
+      "end": 140.5,
       "text": "Bitches talkin' paper then how they wanna rape us"
     },
     {
-      "start": 160.82,
-      "end": 162.22,
+      "start": 159.1,
+      "end": 161.45,
       "text": "Look what you dun started"
     },
     {
-      "start": 162.22,
-      "end": 163.46,
+      "start": 161.5,
+      "end": 163.25,
       "text": "Asked for it, you got it"
     },
     {
-      "start": 163.46,
-      "end": 164.78,
+      "start": 163.3,
+      "end": 164.65,
       "text": "Had it, should have shot it"
     },
     {
-      "start": 164.78,
-      "end": 166.0,
+      "start": 164.7,
+      "end": 165.95,
       "text": "Now your dearly departed"
     },
     {
       "start": 166.0,
-      "end": 169.02,
+      "end": 168.65,
       "text": "Get at me dog, did I rip shit with this one here I flip shit"
     },
     {
-      "start": 169.02,
-      "end": 170.1,
+      "start": 168.7,
+      "end": 169.95,
       "text": "Niggaz know when I kick shit"
     },
     {
-      "start": 170.1,
-      "end": 171.44,
+      "start": 170.0,
+      "end": 171.25,
       "text": "It's gonna be some slick shit"
     },
     {
-      "start": 171.44,
-      "end": 174.22,
+      "start": 171.3,
+      "end": 173.75,
       "text": "What was that look for, when I walked in the door"
     },
     {
-      "start": 174.22,
-      "end": 176.58,
+      "start": 173.8,
+      "end": 176.55,
       "text": "Oh you thought you was raw, boom not anymore"
     },
     {
-      "start": 176.58,
-      "end": 179.8,
+      "start": 176.6,
+      "end": 179.65,
       "text": "Cause now you on the floor, wishin you never saw me walk"
     },
     {
-      "start": 179.8,
-      "end": 181.76,
+      "start": 179.7,
+      "end": 181.75,
       "text": "Through that door, with that 4 4"
     },
     {
-      "start": 181.76,
-      "end": 183.54,
+      "start": 181.8,
+      "end": 183.05,
       "text": "Now it's time for bed"
     },
     {
-      "start": 183.54,
-      "end": 186.04,
+      "start": 183.1,
+      "end": 185.75,
       "text": "Two more to the head, got the floor red"
     },
     {
-      "start": 186.04,
-      "end": 187.08,
+      "start": 185.8,
+      "end": 186.95,
       "text": "Yea that nigga's dead"
     },
     {
-      "start": 187.08,
-      "end": 190.05,
+      "start": 187.0,
+      "end": 189.65,
       "text": "Another unsolved mystery, It's goin' down in history"
     },
     {
-      "start": 190.05,
-      "end": 191.44,
+      "start": 189.7,
+      "end": 191.05,
       "text": "Niggaz ain't never did shit to me"
     },
     {
-      "start": 191.44,
-      "end": 192.77,
+      "start": 191.1,
+      "end": 192.6,
       "text": "Bitch ass niggaz can't get to me"
     },
     {
-      "start": 192.77,
-      "end": 195.04,
+      "start": 192.65,
+      "end": 194.85,
       "text": "Gots to make the move, got a point to prove"
     },
     {
-      "start": 195.04,
-      "end": 198.0,
+      "start": 194.9,
+      "end": 197.55,
       "text": "Got a make'em grove, got'em all like ooh"
     },
     {
-      "start": 198.0,
-      "end": 200.56,
+      "start": 197.6,
+      "end": 199.95,
       "text": "So to the next time, you hear this nigga ryhme"
     },
     {
-      "start": 200.56,
-      "end": 214.703,
+      "start": 200.0,
+      "end": 205.0,
       "text": "Try to keep your mind, on gettin pussy and crime"
     }
-  ],
-  "audioFallback": "assets/audio/ruff.mp3"
+  ]
 }

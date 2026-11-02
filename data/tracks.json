@@ -43,16 +43,16 @@
       "file": "data/tracks/mass-appeal.json"
     },
     {
-      "id": "ruff-ryders-anthem",
-      "title": "Ruff Ryders' Anthem",
-      "artist": "DMX",
-      "file": "data/tracks/ruff-ryders-anthem.json"
-    },
-    {
       "id": "paper",
       "title": "Paper",
       "artist": "Bone Thugs-N-Harmony",
       "file": "data/tracks/paper.json"
+    },
+    {
+      "id": "ruff-ryders-anthem",
+      "title": "Ruff Ryders' Anthem",
+      "artist": "DMX",
+      "file": "data/tracks/ruff-ryders-anthem.json"
     }
   ]
 }
